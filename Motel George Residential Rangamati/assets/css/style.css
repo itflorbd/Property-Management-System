@@ -717,6 +717,27 @@ a svg {
   line-height: 1.6;
 }
 
+.section-head.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-inline: auto;
+  max-width: 860px;
+}
+.section-head.text-center .sub-title {
+  justify-content: center;
+}
+.section-head.text-center h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.section-head.text-center .head-lead {
+  text-align: center;
+  margin-inline: auto;
+}
+
 /* ==========================================================
    ROOMS & SUITES (Filter Chips & Slider Track)
    ========================================================== */
@@ -858,6 +879,50 @@ a svg {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
+  margin-top: 10px;
+}
+.r-card-foot a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  min-height: 38px;
+  box-sizing: border-box;
+}
+.r-card-foot .btn-call {
+  background: var(--navy-900);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+.r-card-foot .btn-call:hover {
+  background: var(--gold);
+  color: var(--navy-950);
+  border-color: var(--gold);
+  transform: translateY(-1px);
+}
+.r-card-foot .btn-wa {
+  background: #25d366;
+  color: var(--white);
+  border: 1px solid #20ba5a;
+  box-shadow: 0 4px 12px -2px rgba(37, 211, 102, 0.4);
+}
+.r-card-foot .btn-wa:hover {
+  background: #20ba5a;
+  box-shadow: 0 6px 16px -2px rgba(37, 211, 102, 0.55);
+  transform: translateY(-1px);
+}
+.r-card-foot svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  pointer-events: none;
 }
 
 /* Slider nav buttons */
@@ -921,6 +986,8 @@ a svg {
 .am-food .a-icon { background: rgba(239, 68, 68, 0.12); color: #dc2626; }
 .am-geyser .a-icon { background: rgba(245, 158, 11, 0.12); color: #d97706; }
 .am-car .a-icon { background: rgba(16, 185, 129, 0.12); color: #059669; }
+.am-wifi .a-icon { background: rgba(99, 102, 241, 0.12); color: #6366f1; }
+.am-service .a-icon { background: rgba(236, 72, 153, 0.12); color: #db2777; }
 
 .a-card h3 {
   font-size: 1.15rem;
@@ -931,6 +998,41 @@ a svg {
   font-size: 0.92rem;
   color: var(--ink-soft);
   line-height: 1.55;
+}
+
+/* Guest Comfort First Action Banner */
+.amenities-bottom-cta {
+  margin-top: 36px;
+  background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 100%);
+  border: 1px solid rgba(229, 181, 60, 0.35);
+  border-radius: var(--radius);
+  padding: clamp(20px, 3vw, 26px) clamp(20px, 3.5vw, 36px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: var(--shadow);
+  color: var(--white);
+}
+.amenities-bottom-cta .ab-text {
+  max-width: 650px;
+}
+.amenities-bottom-cta .ab-text strong {
+  display: block;
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.amenities-bottom-cta .ab-text span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+.amenities-bottom-cta .ab-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 /* ==========================================================
@@ -1819,6 +1921,22 @@ a svg {
   .qb-bar { grid-template-columns: 1fr; }
   .qb-btn { grid-column: span 1; }
   .amenities-grid { grid-template-columns: 1fr; }
+  .amenities-bottom-cta {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    padding: 20px 16px;
+  }
+  .amenities-bottom-cta .ab-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .amenities-bottom-cta .ab-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
   .calc-controls { grid-template-columns: 1fr; }
   .f-row { grid-template-columns: 1fr; }
   .food-highlights { grid-template-columns: 1fr; }

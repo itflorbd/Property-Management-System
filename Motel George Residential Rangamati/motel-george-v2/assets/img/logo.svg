@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#040d1a"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fceda4"/>
+      <stop offset="45%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#aa820a"/>
+    </linearGradient>
+    <linearGradient id="lakeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00b4d8"/>
+      <stop offset="100%" stop-color="#90e0ef"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Ring -->
+  <circle cx="80" cy="80" r="76" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <circle cx="80" cy="80" r="71" fill="none" stroke="rgba(212, 175, 55, 0.3)" stroke-width="1" stroke-dasharray="3 3"/>
+  
+  <!-- Hotel Roof Crest / Mountain Peaks -->
+  <path d="M40 76 L80 44 L120 76" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 34 L80 44" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="80,28 78,34 82,34" fill="url(#goldGrad)"/>
+  
+  <!-- Stylized G Monogram / Motel Pillars -->
+  <path d="M52 76 L52 104 L108 104 L108 76" fill="none" stroke="url(#goldGrad)" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M66 104 L66 84 L94 84 L94 104" fill="none" stroke="url(#goldGrad)" stroke-width="1.8"/>
+  <line x1="80" y1="84" x2="80" y2="104" stroke="url(#goldGrad)" stroke-width="1.2"/>
+  
+  <!-- Kaptai Lake Waves -->
+  <path d="M38 116 Q 59 110, 80 116 T 122 116" fill="none" stroke="url(#lakeGrad)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M46 123 Q 63 118, 80 123 T 114 123" fill="none" stroke="url(#lakeGrad)" stroke-width="1.4" opacity="0.75" stroke-linecap="round"/>
+  
+  <!-- Stars -->
+  <polygon points="80,53 81.5,57.5 86,57.5 82.5,60 84,64.5 80,62 76,64.5 77.5,60 74,57.5 78.5,57.5" fill="url(#goldGrad)"/>
+  <polygon points="64,59 65,62 68,62 65.5,64 66.5,67 64,65 61.5,67 62.5,64 60,62 63,62" fill="url(#goldGrad)" opacity="0.85"/>
+  <polygon points="96,59 97,62 100,62 97.5,64 98.5,67 96,65 93.5,67 94.5,64 92,62 95,62" fill="url(#goldGrad)" opacity="0.85"/>
+  
+  <!-- Text Label -->
+  <text x="80" y="142" font-family="'Cinzel', 'Trajan Pro', Georgia, serif" font-size="9" font-weight="700" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="2">MOTEL GEORGE</text>
+  <text x="80" y="152" font-family="'Hind Siliguri', 'Segoe UI', sans-serif" font-size="6" font-weight="600" fill="#90e0ef" text-anchor="middle" letter-spacing="1">RANGAMATI</text>
+</svg>

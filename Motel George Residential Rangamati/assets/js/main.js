@@ -32,7 +32,7 @@
       specsEn: ['1 King Size Bed', 'Lake View Balcony', 'Hot Water Geyser', 'Silent AC & Free Wi-Fi'],
       descBn: 'কাপ্তাই হ্রদের শান্ত পানি ও পাহাড়ি সূর্যাস্ত উপভোগ করার জন্য সেরা প্রিমিয়াম রুম। বড় কাঁচের জানালা, প্রাইভেট ব্যালকনি, সাউন্ডপ্রুফ এসি, গিজারযুক্ত আধুনিক এটাচড বাথরুম ও ২৪ ঘণ্টা রুম সার্ভিস।',
       descEn: 'Our premier lakeside room offering floor-to-ceiling panoramic views of Kaptai Lake and Rangamati hills. Features a plush king bed, private balcony, silent AC, attached modern geyser bathroom, and 24/7 room service.',
-      phone: '01719321106'
+      phone: '+8801719321106'
     },
     {
       id: 2,
@@ -54,7 +54,7 @@
       specsEn: ['2 Queen Beds', 'Scenic Hill Balcony', 'Split AC & Geyser', 'Seating Lounge & TV'],
       descBn: 'পরিবার বা ৪-৫ জনের ফ্রেন্ডস গ্রুপের জন্য অত্যন্ত প্রশস্ত ও আরামদায়ক স্যুট। দুটি বড় ডাবল বেড, খোলামেলা বারান্দা, চমৎকার ইন্টেরিয়র এবং ইন-হাউস রেস্টুরেন্ট সার্ভিস।',
       descEn: 'Generously spacious suite designed for families and small travel groups of 4-5 persons. Equipped with two queen beds, private scenic balcony, split AC, attached bathroom with geyser, and lounge seating.',
-      phone: '01719321106'
+      phone: '+8801719321106'
     },
     {
       id: 3,
@@ -76,7 +76,7 @@
       specsEn: ['1 Double Bed', 'Sanitized & Clean', 'Split AC Unit', 'High-Speed Wi-Fi'],
       descBn: 'কাপল বা একক ভ্রমণকারীদের জন্য সাশ্রয়ী ও মার্জিত রুম। পরিষ্কার চাদর, সাইলেন্ট এসি, নিরবচ্ছিন্ন বিদ্যুৎ ব্যাকআপ এবং কলেজ গেইট মেইন রোডের শান্ত পরিবেশ।',
       descEn: 'Comfortable and affordable air-conditioned room tailored for couples or solo travelers. Features clean linen, silent split cooling, 24/7 power backup, and fast Wi-Fi.',
-      phone: '01719321106'
+      phone: '+8801719321106'
     },
     {
       id: 4,
@@ -98,7 +98,7 @@
       specsEn: ['2 Single Twin Beds', 'AC & Ceiling Fan', 'Hot Water Bath', 'Tour Assistance'],
       descBn: 'সহকর্মী বা দুই বন্ধুর জন্য উপযুক্ত টুইন বেডরুম। পৃথক আরামদায়ক বিছানা, নিরিবিলি পরিবেশ, হাই-স্পিড ওয়াই-ফাই ও কাপ্তাই লেক বোট ট্যুরের সার্বিক সহায়তা।',
       descEn: 'Perfect setup for friends or corporate colleagues traveling together. Two separate comfortable beds, modern air conditioning, geyser bathroom, and tour desk assistance.',
-      phone: '01719321106'
+      phone: '+8801719321106'
     },
     {
       id: 5,
@@ -120,7 +120,7 @@
       specsEn: ['1 Double Bed', 'Breezy & Clean', 'Attached Bathroom', 'Backpacker Budget'],
       descBn: 'ব্যাকপ্যাকার, ছাত্র ও বাজেট সচেতন ভ্রমণকারীদের জন্য সেরা সাশ্রয়ী অপশন। কম খরচে পরিষ্কার-পরিচ্ছন্ন বিছানা, ফ্যান ও নিরাপদ পরিবেশ।',
       descEn: 'The ideal low-cost choice for backpackers, students, and budget travelers seeking clean, safe, and pleasant lodging in central Rangamati.',
-      phone: '01719321106'
+      phone: '+8801719321106'
     }
   ];
 
@@ -360,8 +360,14 @@
           </div>
           <div class="r-card-price">${isEn ? r.priceEn : r.priceBn}</div>
           <div class="r-card-foot">
-            <a href="tel:${r.phone}" class="btn-call" data-stop="true"><svg><use href="#i-phone"/></svg>${isEn ? 'Call' : 'কল'}</a>
-            <a href="https://wa.me/8801795342854?text=${encodeURIComponent((isEn ? 'Hello Motel George, I want to book: ' : 'আসসালামু আলাইকুম, আমি বুক করতে চাই: ') + (isEn ? r.titleEn : r.titleBn))}" target="_blank" rel="noopener" class="btn-wa" data-stop="true"><svg><use href="#i-wa"/></svg>${isEn ? 'WhatsApp' : 'বুক করুন'}</a>
+            <a href="tel:${r.phone}" class="btn-call" data-stop="true" aria-label="Call Motel George for ${isEn ? r.titleEn : r.titleBn}">
+              <svg><use href="#i-phone"/></svg>
+              <span>${isEn ? 'Call' : 'কল করুন'}</span>
+            </a>
+            <a href="https://wa.me/8801795342854?text=${encodeURIComponent((isEn ? 'Hello Motel George Rangamati, I want to book: ' : 'আসসালামু আলাইকুম Motel George, আমি বুক করতে চাই: ') + (isEn ? r.titleEn : r.titleBn))}" target="_blank" rel="noopener" class="btn-wa" data-stop="true" aria-label="WhatsApp Booking for ${isEn ? r.titleEn : r.titleBn}">
+              <svg><use href="#i-wa"/></svg>
+              <span>${isEn ? 'WhatsApp' : 'WhatsApp'}</span>
+            </a>
           </div>
         </div>
       </article>
@@ -374,6 +380,13 @@
         const id = parseInt(card.dataset.id, 10);
         const room = ROOMS.find(item => item.id === id);
         if (room) openRoomModal(room);
+      });
+
+      // Explicitly stop propagation on Call and WhatsApp buttons
+      card.querySelectorAll('[data-stop="true"]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+        });
       });
     });
   }
