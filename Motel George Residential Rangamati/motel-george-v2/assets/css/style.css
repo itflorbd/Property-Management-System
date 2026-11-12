@@ -11,7 +11,9 @@
   --paper: #F6F3EE;
   --mist: #E6EEEC;
   --sand: #F0E7DA;
-  --clay: #C8693E;
+  --clay: #B5552B;      /* white text on this passes AA (4.9:1) */
+  --clay-dk: #9C4723;
+  --clay-ink: #A04A24;  /* clay for small text on light backgrounds */
   --clay-2: #E28A5D;
   --text: #142321;
   --muted: #5E6B68;
@@ -73,7 +75,7 @@ html[lang="bn"] .eyebrow { letter-spacing: .03em; font-size: .9rem; }
 .btn-sm { height: 42px; padding: 0 20px; font-size: .88rem; }
 .btn-block { width: 100%; }
 .btn-clay { background: var(--clay); color: #fff; }
-.btn-clay:hover { background: #B45A31; }
+.btn-clay:hover { background: var(--clay-dk); }
 .btn-deep { background: var(--deep); color: var(--paper); }
 .btn-deep:hover { background: var(--teal); }
 .btn-light { background: var(--paper); color: var(--deep); }
@@ -158,10 +160,10 @@ html[lang="bn"] .bk small { letter-spacing: .02em; font-size: .8rem; }
 .step button svg { width: 14px; height: 14px; }
 .step output { min-width: 18px; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
 .bk-go { display: flex; align-items: center; gap: 12px; padding: 0 24px; border-radius: 16px; background: var(--clay); color: #fff; text-align: left; transition: background .3s, transform .4s var(--ease); }
-.bk-go:hover { background: #B45A31; }
+.bk-go:hover { background: var(--clay-dk); }
 .bk-go svg { width: 22px; height: 22px; }
 .bk-go b { display: block; font-size: .96rem; white-space: nowrap; }
-.bk-go small { display: block; font-size: .76rem; opacity: .85; }
+.bk-go small { display: block; font-size: .76rem; }
 
 /* ---------- 02 Rooms ---------- */
 .rooms { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(28px, 5vw, 80px); align-items: center; }
@@ -182,10 +184,10 @@ html[lang="bn"] .room-btn b { font-weight: 600; font-size: 1.08rem; line-height:
 .room-btn small { display: block; font-size: .82rem; color: var(--muted); }
 .room-btn i { font-style: normal; font-weight: 700; font-size: .98rem; white-space: nowrap; }
 .room-btn i small { display: inline; font-weight: 500; }
-.room[aria-checked="true"] .room-btn b { color: var(--clay); }
-.room-more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s var(--ease); }
+.room.on .room-btn b { color: var(--clay-ink); }
+.room-more { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows .5s var(--ease), visibility 0s .5s; }
 .room-more > div { overflow: hidden; }
-.room[aria-checked="true"] .room-more { grid-template-rows: 1fr; }
+.room.on .room-more { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows .5s var(--ease); }
 .specs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
 .specs li { display: inline-flex; align-items: center; gap: 5px; padding: 5px 11px; border-radius: 999px; background: var(--mist); font-size: .78rem; font-weight: 500; }
 .specs svg { width: 12px; height: 12px; color: var(--teal); }
@@ -252,7 +254,7 @@ html[lang="bn"] .place b { font-weight: 600; font-size: 1.08rem; line-height: 1.
 .reel-play svg { width: 20px; height: 20px; margin-left: 3px; }
 .reel:hover .reel-play { transform: scale(1.12); background: var(--clay); border-color: var(--clay); }
 .reel-body { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px; font-size: .9rem; line-height: 1.45; }
-.reel-body p { margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.reel-t { margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .reel-foot { margin-top: clamp(18px, 3vh, 30px); }
 
 /* ---------- 07 Plan ---------- */
@@ -280,7 +282,12 @@ html[lang="bn"] .calc-row > small { letter-spacing: .02em; font-size: .84rem; }
 .bignum { display: inline-block; margin-top: clamp(14px, 2.6vh, 26px); font-family: var(--f-display); font-size: clamp(2.2rem, 4.6vw, 3.8rem); line-height: 1; color: #F3B48F; transition: color .3s; }
 .bignum:hover { color: #fff; }
 .c-list { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: .9rem; }
-.c-list a { display: inline-flex; align-items: center; gap: 8px; opacity: .82; transition: opacity .3s; }
+.c-list a { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; white-space: nowrap; opacity: .82; transition: opacity .3s; }
+.bignum { white-space: nowrap; }
+.foot p a { display: inline-block; padding: 6px 2px; }
+.dishes i { color: var(--clay-ink); }
+.link:hover { color: var(--clay-ink); }
+.deep .link:hover { color: var(--clay-2); }
 .c-list a:hover { opacity: 1; }
 .c-list svg { width: 16px; height: 16px; color: var(--teal-2); }
 .signboard { margin-top: clamp(18px, 3.4vh, 32px); display: grid; grid-template-columns: 150px 1fr; gap: 16px; align-items: center; padding: 10px; border-radius: 20px; background: var(--deep-2); border: 1px solid var(--line-l); max-width: 520px; transition: background .3s; }
@@ -323,8 +330,11 @@ html[lang="bn"] .lead-form h3 { font-weight: 600; font-size: 1.35rem; }
 .player-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; }
 
 /* ---------- Reveal ---------- */
-.rv { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease), transform 1s var(--ease); }
-.rv.in { opacity: 1; transform: none; }
+/* Only hide for animation when JS is running, so content is never lost */
+.js .rv { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease), transform 1s var(--ease); }
+.js .rv.in { opacity: 1; transform: none; }
+.no-js .dock { transform: none; }
+.no-js .book, .no-js .calc .total .btn { display: none; }
 .d1 { transition-delay: .08s; } .d2 { transition-delay: .16s; } .d3 { transition-delay: .24s; } .d4 { transition-delay: .32s; }
 
 /* =========================================================
@@ -432,7 +442,8 @@ html[lang="bn"] .lead-form h3 { font-weight: 600; font-size: 1.35rem; }
   .contact { padding-bottom: 76px; }
   .contact-in { gap: 20px; }
   .bignum { font-size: 2rem; }
-  .c-list { gap: 6px 16px; font-size: .84rem; }
+  .c-list { gap: 0 16px; margin-top: 8px; font-size: .84rem; }
+  .c-list a { min-height: 36px; }
   .signboard { grid-template-columns: 96px 1fr; gap: 12px; padding: 8px; }
   .signboard img { height: 64px; }
   .signboard { margin-top: 14px; }
@@ -472,5 +483,5 @@ html[lang="bn"] .lead-form h3 { font-weight: 600; font-size: 1.35rem; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
-  .rv { opacity: 1; transform: none; }
+  .js .rv { opacity: 1; transform: none; }
 }

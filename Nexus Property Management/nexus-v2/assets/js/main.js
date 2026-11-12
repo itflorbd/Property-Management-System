@@ -110,8 +110,8 @@
   $$('.tabs button').forEach((b) => {
     b.addEventListener('click', () => {
       if (b.dataset.filter === filter) return;
-      $$('.tabs button').forEach((x) => x.setAttribute('aria-selected', 'false'));
-      b.setAttribute('aria-selected', 'true');
+      $$('.tabs button').forEach((x) => x.setAttribute('aria-pressed', 'false'));
+      b.setAttribute('aria-pressed', 'true');
       filter = b.dataset.filter;
       $$('.pcard', propRail).forEach((c) => c.classList.add('out'));
       setTimeout(renderProps, 220);
@@ -130,7 +130,7 @@
         <img src="${r.img}" alt="" loading="lazy">
         <span class="reel-views"><svg><use href="#i-play"/></svg>${r.views}</span>
         <span class="reel-play"><svg><use href="#i-play"/></svg></span>
-        <span class="reel-body"><b>${esc(r.price[i])}</b><p>${esc(r.title[i])}</p></span>
+        <span class="reel-body"><b>${esc(r.price[i])}</b><span class="reel-t">${esc(r.title[i])}</span></span>
       </button>`).join('');
     updateProgress(reelRail, $('#reelProg'));
   }
@@ -301,9 +301,13 @@
   function toggleMenu(open) {
     document.body.classList.toggle('menu-open', open);
     burger.setAttribute('aria-expanded', String(open));
-    menu.setAttribute('aria-hidden', String(!open));
+    menu.inert = !open;
     document.body.style.overflow = open ? 'hidden' : '';
+    if (open) setTimeout(() => menu.querySelector('a').focus({ preventScroll: true }), 300);
+    else if (menu.contains(document.activeElement)) burger.focus({ preventScroll: true });
   }
+  // Close the menu if the screen grows to desktop size while it is open
+  window.matchMedia('(min-width: 1025px)').addEventListener('change', (e) => { if (e.matches) toggleMenu(false); });
   burger.addEventListener('click', () => toggleMenu(!document.body.classList.contains('menu-open')));
   $$('#menu a').forEach((a) => a.addEventListener('click', () => toggleMenu(false)));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) toggleMenu(false); });
@@ -349,6 +353,7 @@
         if (!en.isIntersecting) return;
         co.unobserve(en.target);
         const el = en.target, end = Number(el.dataset.count), suf = el.dataset.suffix || '';
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         const t0 = performance.now(), dur = 1400;
         const tick = (now) => {
           const p = Math.min(1, (now - t0) / dur);
