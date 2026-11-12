@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="bn" class="no-js">
 <head>
   <meta charset="UTF-8">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Motel George Residential — কাপ্তাই হ্রদের পাশে, রাঙ্গামাটি</title>
   <meta name="description" content="মোটেল জর্জ আবাসিক, কলেজ গেইট, রাঙ্গামাটি। লেক ভিউ রুম, ২৪/৭ বিদ্যুৎ, পাহাড়ি খাবার ও কাপ্তাই বোট বুকিং। Motel George Residential Rangamati.">
@@ -15,8 +16,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="preload" as="image" href="assets/img/hero-rangamati.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/hero-rangamati.jpg" imagesrcset="assets/img/hero-rangamati-900.jpg 900w, assets/img/hero-rangamati.jpg 1376w" imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Motel",
+    "name": "Motel George Residential",
+    "alternateName": "মেসার্স মোটেল জর্জ আবাসিক",
+    "description": "Residential motel by Kaptai Lake with lake-view rooms, 24/7 power backup, in-house dining and boat tour booking.",
+    "image": "assets/img/hero-rangamati.jpg",
+    "logo": "assets/img/logo.svg",
+    "telephone": "+8801719321106",
+    "email": "motelgeorge.rmt@gmail.com",
+    "priceRange": "৳1,000 – ৳3,200",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "College Gate, near Hospital Road Mor",
+      "addressLocality": "Rangamati Sadar",
+      "postalCode": "4500",
+      "addressCountry": "BD"
+    },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "24/7 power backup", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Parking", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Restaurant", "value": true }
+    ],
+    "sameAs": ["https://www.facebook.com/motelgeorgeresidentialrangamati"]
+  }
+  </script>
 </head>
 <body>
 
@@ -75,7 +105,7 @@
   </div>
 </header>
 
-<div class="menu" id="menu" aria-hidden="true">
+<div class="menu" id="menu" inert>
   <nav aria-label="Mobile">
     <a href="#rooms" data-en="Rooms">রুম</a>
     <a href="#amenities" data-en="Comforts">সুবিধা</a>
@@ -95,7 +125,7 @@
 
 <!-- ============ 01 HERO ============ -->
 <section class="sec hero" id="home">
-  <div class="hero-media"><img src="assets/img/hero-rangamati.jpg" alt="Kaptai Lake at sunrise, Rangamati" fetchpriority="high"></div>
+  <div class="hero-media"><img src="assets/img/hero-rangamati.jpg" srcset="assets/img/hero-rangamati-900.jpg 900w, assets/img/hero-rangamati.jpg 1376w" sizes="100vw" width="1376" height="768" alt="Kaptai Lake at sunrise, Rangamati" fetchpriority="high"></div>
 
   <div class="wrap hero-in">
     <div class="hero-top rv">
@@ -140,7 +170,7 @@
 <section class="sec paper" id="rooms">
   <div class="wrap rooms">
     <figure class="stage rv" id="stage">
-      <img id="stageImg" src="assets/img/room-lakeview.jpg" alt="">
+      <img id="stageImg" src="assets/img/room-lakeview.jpg" width="1376" height="768" alt="">
       <figcaption>
         <span class="stage-tag" id="stageTag"></span>
         <span class="stage-price"><b id="stagePrice"></b><small data-en="per night">প্রতি রাত</small></span>
@@ -150,7 +180,7 @@
     <div class="rooms-txt">
       <p class="eyebrow rv"><span data-en="Rooms &amp; Suites">রুম ও স্যুট</span></p>
       <h2 class="title rv d1" data-en="Pick your <em>room.</em>">আপনার <em>রুম</em> বেছে নিন</h2>
-      <div class="room-list rv d2" id="roomList" role="radiogroup" aria-label="Rooms"></div>
+      <div class="room-list rv d2" id="roomList"></div>
     </div>
   </div>
 </section>
@@ -180,7 +210,7 @@
       <p class="eyebrow rv"><span data-en="Explore Rangamati">রাঙ্গামাটি দর্শন</span></p>
       <h2 class="title rv d1" data-en="The lake is<br><em>your backyard.</em>">হ্রদটাই<br><em>আপনার উঠোন।</em></h2>
 
-      <ul class="boats rv d2" aria-label="Boat packages">
+      <ul class="boats rv d2">
         <li><span><b data-en="Engine boat">ইঞ্জিন বোট</b><small data-en="Hanging bridge &amp; lake">ঝুলন্ত সেতু ও লেক</small></span><i data-en="৳2,000">৳২,০০০</i></li>
         <li><span><b data-en="Reserved boat">রিজার্ভ বোট</b><small data-en="Shuvolong waterfall">শুভলং ঝর্ণা</small></span><i data-en="৳3,500">৳৩,৫০০</i></li>
         <li><span><b data-en="Speedboat">স্পিডবোট</b><small data-en="Full-day package">ফুল ডে প্যাকেজ</small></span><i data-en="৳6,000">৳৬,০০০</i></li>
@@ -192,9 +222,9 @@
     </div>
 
     <div class="places">
-      <figure class="place p1 rv"><img src="assets/img/hanging-bridge.jpg" alt="Rangamati hanging bridge" loading="lazy"><figcaption><b data-en="Hanging Bridge">ঝুলন্ত সেতু</b><small data-en="Minutes away">কয়েক মিনিটের পথ</small></figcaption></figure>
-      <figure class="place p2 rv d1"><img src="assets/img/kaptai-boat.jpg" alt="Boat on Kaptai Lake" loading="lazy"><figcaption><b data-en="Shuvolong Falls">শুভলং ঝর্ণা</b><small data-en="By boat">বোটে করে</small></figcaption></figure>
-      <figure class="place p3 rv d2"><img src="assets/img/hero-rangamati.jpg" alt="Kaptai Lake hills" loading="lazy"><figcaption><b data-en="Polwel Park &amp; Rajban Vihara">পলওয়েল পার্ক ও রাজবন বিহার</b><small data-en="Lakefront">লেকের ধারে</small></figcaption></figure>
+      <figure class="place p1 rv"><img src="assets/img/hanging-bridge.jpg" width="1376" height="768" alt="Rangamati hanging bridge" loading="lazy"><figcaption><b data-en="Hanging Bridge">ঝুলন্ত সেতু</b><small data-en="Minutes away">কয়েক মিনিটের পথ</small></figcaption></figure>
+      <figure class="place p2 rv d1"><img src="assets/img/kaptai-boat.jpg" width="1376" height="768" alt="Boat on Kaptai Lake" loading="lazy"><figcaption><b data-en="Shuvolong Falls">শুভলং ঝর্ণা</b><small data-en="By boat">বোটে করে</small></figcaption></figure>
+      <figure class="place p3 rv d2"><img src="assets/img/hero-rangamati-900.jpg" width="900" height="502" alt="Kaptai Lake hills" loading="lazy"><figcaption><b data-en="Polwel Park &amp; Rajban Vihara">পলওয়েল পার্ক ও রাজবন বিহার</b><small data-en="Lakefront">লেকের ধারে</small></figcaption></figure>
     </div>
   </div>
 </section>
@@ -202,7 +232,7 @@
 <!-- ============ 05 DINING ============ -->
 <section class="sec sand" id="dining">
   <div class="wrap dining">
-    <figure class="dine-media rv"><img src="assets/img/dining-food.jpg" alt="Kaptai fish, bamboo chicken and bhorta" loading="lazy"></figure>
+    <figure class="dine-media rv"><img src="assets/img/dining-food.jpg" width="1376" height="768" alt="Kaptai fish, bamboo chicken and bhorta" loading="lazy"></figure>
     <div class="dine-txt">
       <p class="eyebrow rv"><span data-en="In-house dining">নিজস্ব রান্নাঘর</span></p>
       <h2 class="title rv d1" data-en="Lake fish.<br><em>Bamboo chicken.</em>">লেকের মাছ,<br><em>বাঁশের মুরগি।</em></h2>
@@ -297,7 +327,7 @@
         <li><a href="mailto:motelgeorge.rmt@gmail.com"><svg><use href="#i-mail"/></svg>motelgeorge.rmt@gmail.com</a></li>
       </ul>
       <a href="https://maps.google.com/?q=Motel+George+College+Gate+Rangamati" target="_blank" rel="noopener" class="signboard rv d4">
-        <img src="assets/img/building.jpg" alt="Motel George building and signboard at College Gate" loading="lazy">
+        <img src="assets/img/building.jpg" width="1400" height="787" alt="Motel George building and signboard at College Gate" loading="lazy">
         <span>
           <small data-en="Look for this signboard">এই সাইনবোর্ডটি খুঁজুন</small>
           <b data-en="College Gate, near Hospital Road, Rangamati 4500">কলেজ গেইট, হাসপাতাল রোড মোড়, রাঙ্গামাটি ৪৫০০</b>
@@ -329,12 +359,12 @@
 
 </main>
 
-<div class="dock" aria-label="Quick contact">
+<nav class="dock" aria-label="Quick contact">
   <a href="tel:+8801719321106"><svg><use href="#i-phone"/></svg><span data-en="Call">কল</span></a>
   <a href="https://wa.me/8801795342854" target="_blank" rel="noopener" class="dock-wa"><svg><use href="#i-wa"/></svg><span data-en="Book on WhatsApp">WhatsApp-এ বুক</span></a>
-</div>
+</nav>
 
-<dialog class="player" id="player" aria-label="Video">
+<dialog class="player" id="player" aria-labelledby="playerFrame">
   <button type="button" class="player-x" aria-label="Close"><svg><use href="#i-x"/></svg></button>
   <div class="player-frame"><iframe id="playerFrame" title="Motel George video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
   <div class="player-foot">

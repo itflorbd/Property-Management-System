@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="bn" class="no-js">
 <head>
   <meta charset="UTF-8">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Nexus Property Management — সিলেটের প্রিমিয়াম রিয়েল এস্টেট</title>
   <meta name="description" content="সিলেটে যাচাইকৃত জমি, বাড়ি ও কমার্শিয়াল প্রপার্টি। Nexus Property Management — Your Trusted Real Estate Partner in Sylhet.">
@@ -15,8 +16,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Hind+Siliguri:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="preload" as="image" href="assets/img/hero-nature.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/hero-nature.jpg" imagesrcset="assets/img/hero-nature-900.jpg 900w, assets/img/hero-nature.jpg 1376w" imagesizes="100vw" fetchpriority="high">
+  <link rel="apple-touch-icon" href="assets/img/logo-crop.png">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Nexus Property Management",
+    "description": "Verified land, homes and commercial property in Sylhet, with deed and khatian checking.",
+    "image": "assets/img/hero-nature.jpg",
+    "logo": "assets/img/logo-crop.png",
+    "telephone": "+8801851659285",
+    "email": "ahshamed91@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Sylhet", "addressCountry": "BD" },
+    "areaServed": "Sylhet",
+    "sameAs": ["https://www.facebook.com/profile.php?id=61573882153742", "https://youtube.com/@ahmedconsultancy91"]
+  }
+  </script>
 </head>
 <body>
 
@@ -77,7 +95,7 @@
 </header>
 
 <!-- Fullscreen mobile menu -->
-<div class="menu" id="menu" aria-hidden="true">
+<div class="menu" id="menu" inert>
   <nav aria-label="Mobile">
     <a href="#collection"><i>01</i><span data-en="Collection">সংগ্রহ</span></a>
     <a href="#trust"><i>02</i><span data-en="Why Us">কেন আমরা</span></a>
@@ -104,7 +122,7 @@
 <!-- ============ 01 HERO ============ -->
 <section class="sec hero" id="home" data-sec="01">
   <div class="hero-media">
-    <img src="assets/img/hero-nature.jpg" alt="Luxury villa overlooking Sylhet tea gardens" fetchpriority="high">
+    <img src="assets/img/hero-nature.jpg" srcset="assets/img/hero-nature-900.jpg 900w, assets/img/hero-nature.jpg 1376w" sizes="100vw" width="1376" height="768" alt="Luxury villa overlooking Sylhet tea gardens" fetchpriority="high">
   </div>
 
   <div class="wrap hero-in">
@@ -146,7 +164,7 @@
           <option data-en="1 Crore +">১ কোটি +</option>
         </select>
       </label>
-      <button type="submit" class="f-go" aria-label="Search">
+      <button type="submit" class="f-go">
         <svg><use href="#i-search"/></svg><span data-en="Find">খুঁজুন</span>
       </button>
     </form>
@@ -170,11 +188,11 @@
         <p class="eyebrow rv"><i>02</i><span data-en="The Collection">নির্বাচিত সংগ্রহ</span></p>
         <h2 class="title rv d1" data-en="Handpicked in <em>Sylhet</em>">বাছাই করা <em>প্রপার্টি</em></h2>
       </div>
-      <div class="tabs rv d2" role="tablist" aria-label="Filter">
-        <button type="button" role="tab" data-filter="all" aria-selected="true" data-en="All">সব</button>
-        <button type="button" role="tab" data-filter="land" aria-selected="false" data-en="Land">জমি</button>
-        <button type="button" role="tab" data-filter="house" aria-selected="false" data-en="Homes">বাড়ি</button>
-        <button type="button" role="tab" data-filter="commercial" aria-selected="false" data-en="Commercial">কমার্শিয়াল</button>
+      <div class="tabs rv d2" role="group" aria-label="Filter properties">
+        <button type="button" data-filter="all" aria-pressed="true" data-en="All">সব</button>
+        <button type="button" data-filter="land" aria-pressed="false" data-en="Land">জমি</button>
+        <button type="button" data-filter="house" aria-pressed="false" data-en="Homes">বাড়ি</button>
+        <button type="button" data-filter="commercial" aria-pressed="false" data-en="Commercial">কমার্শিয়াল</button>
       </div>
     </div>
   </div>
@@ -194,7 +212,7 @@
 <section class="sec sand" id="trust" data-sec="03">
   <div class="wrap trust">
     <figure class="trust-media rv">
-      <img src="assets/img/consult.jpg" alt="Nexus agent handing keys to a family" loading="lazy">
+      <img src="assets/img/consult.jpg" width="1200" height="896" alt="Nexus agent handing keys to a family" loading="lazy">
       <figcaption class="seal">
         <svg><use href="#i-shield"/></svg>
         <span><b data-en="100% verified">১০০% যাচাইকৃত</b><small data-en="before any payment">টাকা দেওয়ার আগেই</small></span>
@@ -294,7 +312,7 @@
     </div>
   </div>
 
-  <div class="marquee" aria-label="Areas we cover">
+  <div class="marquee" role="region" aria-label="Areas we cover">
     <div class="mq-track">
       <span data-en="Subidbazar">সুবিদবাজার</span><span data-en="Londoni Road">লন্ডনী রোড</span><span data-en="Akhalia">আখালিয়া</span><span data-en="Surma R/A">সুরমা আবাসিক</span><span data-en="Sheikhghat">শেখঘাট</span><span data-en="Shahparan">শাহপরান</span><span data-en="Tultikar">টুলটিকর</span><span data-en="Majortila">মেজরটিলা</span><span data-en="Peerbazar">পীরেরবাজার</span><span data-en="Sonatola">সোনাতলা</span><span data-en="Badaghat">বাদাঘাট</span><span data-en="TV Gate">টিভি গেইট</span><span data-en="Shaheber Bazar">সাহেবের বাজার</span><span data-en="Bateshwar">বটেশ্বর</span><span data-en="Kadamtoli">কদমতলী</span>
     </div>
@@ -303,7 +321,7 @@
 
 <!-- ============ 07 CONTACT ============ -->
 <section class="sec contact" id="contact" data-sec="07">
-  <div class="contact-media"><img src="assets/img/teagarden.jpg" alt="" loading="lazy"></div>
+  <div class="contact-media"><img src="assets/img/teagarden.jpg" width="1376" height="768" alt="" loading="lazy"></div>
 
   <div class="wrap contact-in">
     <div class="contact-txt">
@@ -358,13 +376,13 @@
 </main>
 
 <!-- Mobile action dock -->
-<div class="dock" aria-label="Quick contact">
+<nav class="dock" aria-label="Quick contact">
   <a href="tel:+8801851659285"><svg><use href="#i-phone"/></svg><span data-en="Call">কল</span></a>
   <a href="https://wa.me/8801851659285" target="_blank" rel="noopener" class="dock-wa"><svg><use href="#i-wa"/></svg><span>WhatsApp</span></a>
-</div>
+</nav>
 
 <!-- Reel player -->
-<dialog class="player" id="player" aria-label="Property video">
+<dialog class="player" id="player" aria-labelledby="playerFrame">
   <button type="button" class="player-x" aria-label="Close"><svg><use href="#i-x"/></svg></button>
   <div class="player-frame"><iframe id="playerFrame" title="Property video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
   <div class="player-foot">

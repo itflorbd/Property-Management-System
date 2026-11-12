@@ -74,6 +74,7 @@
       btns[0].disabled = v <= min; btns[1].disabled = v >= max;
     };
     out.dataset.v = out.textContent;
+    out.setAttribute('aria-live', 'polite');
     btns.forEach((b) => b.addEventListener('click', () => {
       const v = Math.min(max, Math.max(min, Number(out.dataset.v) + Number(b.dataset.d)));
       out.dataset.v = v; out.textContent = num(v); sync(); onChange && onChange(v);
@@ -99,6 +100,14 @@
   }
   bIn.addEventListener('change', syncDates);
   bOut.addEventListener('change', syncDates);
+  // Clicking anywhere on a date field opens the calendar (not just the tiny icon)
+  $$('input[type="date"]').forEach((inp) => {
+    inp.closest('label').addEventListener('click', (e) => {
+      if (typeof inp.showPicker !== 'function') return;
+      e.preventDefault(); inp.focus();
+      try { inp.showPicker(); } catch (err) { /* needs a user gesture; ignore */ }
+    });
+  });
 
   function renderRoomOptions() {
     const keep = bRoom.value;
@@ -140,12 +149,12 @@
   function renderRooms() {
     const i = isEn() ? 1 : 0;
     roomList.innerHTML = ROOMS.map((r) => `
-      <div class="room" role="radio" aria-checked="${r.id === activeRoom}" data-id="${r.id}">
-        <button type="button" class="room-btn">
+      <div class="room${r.id === activeRoom ? ' on' : ''}" data-id="${r.id}">
+        <button type="button" class="room-btn" aria-expanded="${r.id === activeRoom}" aria-controls="rm-${r.id}">
           <span><b>${esc(r.name[i])}</b><small>${esc(r.meta[i])}</small></span>
           <i>${taka(r.price)}<small>${t(' /রাত', ' /night')}</small></i>
         </button>
-        <div class="room-more"><div>
+        <div class="room-more" id="rm-${r.id}"><div>
           <ul class="specs">${r.specs[i].map((s) => `<li><svg><use href="#i-check"/></svg>${esc(s)}</li>`).join('')}</ul>
           <div class="room-acts">
             <a class="btn btn-clay" target="_blank" rel="noopener" href="${waLink(t('আসসালামু আলাইকুম, আমি এই রুমটি বুক করতে চাই: ', 'Hello, I would like to book: ') + r.name[i] + ' (' + taka(r.price) + ')')}"><svg><use href="#i-wa"/></svg>${t('বুক করুন', 'Book')}</a>
@@ -162,8 +171,16 @@
     const id = btn.parentElement.dataset.id;
     if (id === activeRoom) return;
     activeRoom = id;
-    $$('.room', roomList).forEach((r) => r.setAttribute('aria-checked', String(r.dataset.id === id)));
+    $$('.room', roomList).forEach((r) => {
+      const on = r.dataset.id === id;
+      r.classList.toggle('on', on);
+      r.querySelector('.room-btn').setAttribute('aria-expanded', String(on));
+    });
     setStage(ROOMS.find((r) => r.id === id), true);
+    // Keep the booking bar and cost planner in sync with the chosen room
+    bRoom.value = id;
+    const idx = ROOMS.findIndex((r) => r.id === id);
+    if (idx !== cRoomIdx) { cRoomIdx = idx; $$('button', cRoomEl).forEach((x, n) => x.setAttribute('aria-checked', String(n === idx))); updateTotal(); }
   });
 
   /* ---------- Cost planner ---------- */
@@ -185,7 +202,6 @@
     const room = ROOMS[cRoomIdx], boat = BOATS[cBoatIdx];
     const n = nights.get(), r = rooms.get();
     const total = room.price * n * r + boat.price;
-    const i = isEn() ? 1 : 0;
     $('#cBreak').textContent = t(
       `${taka(room.price)} × ${num(n)} রাত × ${num(r)} রুম` + (boat.price ? ` + বোট ${taka(boat.price)}` : ''),
       `${taka(room.price)} × ${n} night${n > 1 ? 's' : ''} × ${r} room${r > 1 ? 's' : ''}` + (boat.price ? ` + boat ${taka(boat.price)}` : '')
@@ -204,8 +220,8 @@
       el.textContent = taka(shown);
       if (p < 1) raf = requestAnimationFrame(tick); else shown = total;
     };
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { shown = total; el.textContent = taka(total); return; }
     raf = requestAnimationFrame(tick);
-    void i;
   }
 
   /* ---------- Reels ---------- */
@@ -218,7 +234,7 @@
         <img src="${r.img}" alt="" loading="lazy">
         <span class="reel-views"><svg><use href="#i-play"/></svg>${r.views}</span>
         <span class="reel-play"><svg><use href="#i-play"/></svg></span>
-        <span class="reel-body"><p>${esc(r.title[i])}</p></span>
+        <span class="reel-body"><span class="reel-t">${esc(r.title[i])}</span></span>
       </button>`).join('');
   }
   reelRail.addEventListener('click', (e) => {
@@ -299,9 +315,12 @@
   function toggleMenu(open) {
     document.body.classList.toggle('menu-open', open);
     burger.setAttribute('aria-expanded', String(open));
-    menu.setAttribute('aria-hidden', String(!open));
+    menu.inert = !open;
     document.body.style.overflow = open ? 'hidden' : '';
+    if (open) setTimeout(() => menu.querySelector('a').focus({ preventScroll: true }), 300);
+    else if (menu.contains(document.activeElement)) burger.focus({ preventScroll: true });
   }
+  window.matchMedia('(min-width: 1081px)').addEventListener('change', (e) => { if (e.matches) toggleMenu(false); });
   burger.addEventListener('click', () => toggleMenu(!document.body.classList.contains('menu-open')));
   $$('#menu a').forEach((a) => a.addEventListener('click', () => toggleMenu(false)));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) toggleMenu(false); });
