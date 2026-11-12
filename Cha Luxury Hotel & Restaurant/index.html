@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/logo.jpg">
+<title>Cha Luxury Hotel & Restaurant | শ্রীমঙ্গল | চা-বাগানের কোলে বিলাসবহুল আতিথেয়তা</title>
+<meta name="description" content="শ্রীমঙ্গলের চা-বাগানের কাছে আরামদায়ক রুম, সুস্বাদু রেস্টুরেন্ট ও সহজ বুকিং। Cha Luxury Hotel & Restaurant, Sagardighi Road, Sreemangal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#1d1918; --green2:#2b2524; --gold:#d4a800; --gold2:#f7d93a;
+  --cream:#faf6ec; --ink:#1b1b18; --muted:#6b6a60; --white:#fff;
+  --radius:18px; --shadow:0 18px 50px rgba(29,25,24,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Hind Siliguri',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-size:17px;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Noto Serif Bengali','Cormorant Garamond',serif;line-height:1.3}
+body[data-lang="en"] h1,body[data-lang="en"] h2,body[data-lang="en"] h3,body[data-lang="en"] .serif{font-family:'Cormorant Garamond',serif}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:auto;padding:0 20px}
+section{padding:90px 0}
+/* language toggle */
+body[data-lang="bn"] .en{display:none!important}
+body[data-lang="en"] .bn{display:none!important}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.35s;padding:14px 0}
+header.solid{background:rgba(29,25,24,.96);backdrop-filter:blur(10px);padding:8px 0;box-shadow:0 4px 24px rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff}
+.logoimg{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--gold2);object-fit:cover}
+.logo b{font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:.04em;display:block;line-height:1}
+.logo small{font-size:10.5px;letter-spacing:.28em;color:var(--gold2);text-transform:uppercase}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{color:#f6f1de;font-size:15px;font-weight:500;position:relative}
+nav a:after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--gold);transition:.3s}
+nav a:hover:after{width:100%}
+.actions{display:flex;align-items:center;gap:10px}
+.lang{display:flex;border:1px solid rgba(247,217,58,.6);border-radius:30px;overflow:hidden}
+.lang button{background:none;border:0;color:#f6f1de;padding:6px 13px;cursor:pointer;font:600 13px 'Hind Siliguri'}
+.lang button.on{background:var(--gold);color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 28px;border-radius:40px;font-weight:600;border:0;cursor:pointer;font-family:inherit;font-size:16px;transition:.3s}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--green);box-shadow:0 8px 24px rgba(247,217,58,.4)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(247,217,58,.55)}
+.btn-line{border:1.5px solid var(--gold);color:#fff;background:transparent}
+.btn-line:hover{background:var(--gold);color:var(--green)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;color:#fff;padding:130px 0 150px;
+  background:linear-gradient(180deg,rgba(29,25,24,.55),rgba(29,25,24,.9)),url(assets/hero.jpg) center/cover,
+  radial-gradient(circle at 70% 20%,#5a4710,#1d1918 70%);}
+.hero:before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(115deg,transparent 0 46px,rgba(247,217,58,.05) 46px 48px);pointer-events:none}
+.tea-hills{position:absolute;left:0;right:0;bottom:0;height:150px;opacity:.9}
+.eyebrow{color:var(--gold2);letter-spacing:.3em;font-size:13px;text-transform:uppercase;font-weight:600;display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:"";width:40px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(36px,6vw,68px);margin:18px 0;max-width:800px;font-weight:700}
+.hero h1 em{color:var(--gold2);font-style:normal}
+.tagline{color:var(--gold2);font-size:22px;font-style:italic;margin-bottom:10px}
+.hero p.lead{max-width:600px;font-size:19px;color:#e6e0cc}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.badges{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px;font-size:14.5px;color:#e6e0cc}
+.badges span{display:flex;align-items:center;gap:8px}
+.stars{color:var(--gold2);letter-spacing:3px}
+
+/* booking bar */
+.booking{position:relative;z-index:5;margin-top:-80px}
+.bbox{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:16px;align-items:end;border-top:4px solid var(--gold)}
+.bbox label{font-size:13px;font-weight:600;color:var(--muted);display:block;margin-bottom:5px}
+.bbox input,.bbox select,.contact-form input,.contact-form textarea{width:100%;padding:12px 14px;border:1.5px solid #e4dec9;border-radius:12px;font:500 16px 'Hind Siliguri';background:#fffdf7;color:var(--ink)}
+.bbox input:focus,.bbox select:focus,.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(247,217,58,.25)}
+.bnote{text-align:center;font-size:13.5px;color:var(--muted);margin-top:12px}
+
+/* titles */
+.title{text-align:center;max-width:680px;margin:0 auto 54px}
+.title .tag{color:var(--gold);letter-spacing:.28em;text-transform:uppercase;font-size:13px;font-weight:700}
+.title h2{font-size:clamp(28px,4vw,42px);color:var(--green);margin:8px 0 14px}
+.title p{color:var(--muted)}
+.orn{display:flex;justify-content:center;align-items:center;gap:10px;color:var(--gold);margin-top:14px}
+.orn:before,.orn:after{content:"";width:60px;height:1px;background:var(--gold)}
+
+/* about */
+.about{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
+.about-art{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+  background:url(assets/about.jpg) center/cover,linear-gradient(160deg,#6b5412,#1d1918)}
+.about-art svg{position:absolute;inset:0;width:100%;height:100%}
+.float-card{position:absolute;right:-18px;bottom:30px;background:var(--green);color:#fff;padding:20px 24px;border-radius:14px;border:1px solid var(--gold);box-shadow:var(--shadow);max-width:230px}
+.float-card b{font-size:34px;color:var(--gold2);font-family:'Cormorant Garamond',serif;display:block;line-height:1}
+.about h2{font-size:clamp(28px,3.6vw,40px);color:var(--green);margin:8px 0 16px}
+.about p{color:#4a4a42;margin-bottom:14px}
+.feat-mini{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.feat-mini div{display:flex;gap:10px;align-items:center;font-weight:500}
+.feat-mini i{width:34px;height:34px;border-radius:50%;background:rgba(247,217,58,.18);color:var(--gold);display:grid;place-items:center;font-style:normal;flex:none}
+
+/* rooms */
+.rooms{background:#fff}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.room{background:var(--cream);border-radius:var(--radius);overflow:hidden;transition:.4s;border:1px solid #eee6cd;display:flex;flex-direction:column}
+.room:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.room .img{height:210px;position:relative;background-size:cover;background-position:center}
+.room .img span{position:absolute;top:14px;left:14px;background:var(--green);color:var(--gold2);font-size:12px;padding:4px 12px;border-radius:20px;font-weight:600}
+.room .body{padding:22px;display:flex;flex-direction:column;flex:1}
+.room h3{font-size:21px;color:var(--green);margin-bottom:6px}
+.room ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 18px}
+.room li{font-size:13px;background:#fff;border:1px solid #eadfbf;padding:3px 11px;border-radius:20px;color:#5a5a4e}
+.room .btn{margin-top:auto;width:100%;background:var(--green);color:#fff;padding:11px}
+.room .btn:hover{background:var(--gold);color:var(--green)}
+.r1{background-image:url(assets/room1.jpg),linear-gradient(135deg,#1f5a40,#1d1918)}
+.r2{background-image:url(assets/room2.jpg),linear-gradient(135deg,#7a5c2b,#2a1f0d)}
+.r3{background-image:url(assets/room3.jpg),linear-gradient(135deg,#2e4d6b,#0f1f2a)}
+.r4{background-image:url(assets/room4.jpg),linear-gradient(135deg,#6b2e4d,#2a0f1f)}
+.r5{background-image:url(assets/room5.jpg),linear-gradient(135deg,#3b6b2e,#142a0f)}
+.r6{background-image:url(assets/room6.jpg),linear-gradient(135deg,#8a6a2b,#3a2a0d)}
+
+/* dining */
+.dining{background:var(--green);color:#fff;position:relative}
+.dining .title h2{color:#fff}.dining .title p{color:#cfc9b3}
+.tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:36px}
+.tabs button{background:none;border:1px solid rgba(247,217,58,.5);color:#f6f1de;padding:9px 22px;border-radius:30px;cursor:pointer;font:600 15px 'Hind Siliguri';transition:.3s}
+.tabs button.on,.tabs button:hover{background:var(--gold);color:var(--green);border-color:var(--gold)}
+.menu{display:none;grid-template-columns:1fr 1fr;gap:18px 50px}
+.menu.on{display:grid}
+.item{display:flex;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px dashed rgba(247,217,58,.35)}
+.item h4{font-size:18px;font-weight:600;color:#fff}
+.item p{font-size:14px;color:#bdb8a3}
+.item .dots{flex:1;border-bottom:1px dotted rgba(247,217,58,.4);transform:translateY(-4px)}
+.item .tagx{font-size:12px;color:var(--gold2);white-space:nowrap}
+.dnote{text-align:center;color:#bdb8a3;font-size:14px;margin-top:30px}
+.signature{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:70px;background:rgba(255,255,255,.05);border:1px solid rgba(247,217,58,.3);border-radius:var(--radius);overflow:hidden}
+.signature .img{min-height:320px;height:100%;background:url(assets/tea.jpg) center/cover,linear-gradient(135deg,#a8741e,#3b2408)}
+.signature .txt{padding:36px}
+.signature h3{font-size:28px;color:var(--gold2);margin:6px 0 12px}
+.layers{display:flex;gap:6px;margin-top:18px}
+.layers i{flex:1;height:10px;border-radius:5px}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.svc div{background:#fff;border-radius:var(--radius);padding:30px 22px;text-align:center;border:1px solid #eee6cd;transition:.3s}
+.svc div:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:var(--shadow)}
+.svc .ic{font-size:34px;width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green2));display:grid;place-items:center;margin:0 auto 14px;color:var(--gold2)}
+.svc h3{font-size:18px;color:var(--green);margin-bottom:4px}
+.svc p{font-size:14.5px;color:var(--muted)}
+
+/* explore */
+.explore{background:linear-gradient(180deg,#fff,var(--cream))}
+.near{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.near .c{border-radius:var(--radius);padding:26px;color:#fff;min-height:210px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.near .c:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(10,25,18,.92))}
+.near .c>*{position:relative}
+.near .c h3{font-size:19px}
+.near .c span{color:var(--gold2);font-size:14px;font-weight:600}
+.n1{background:linear-gradient(135deg,#4c8a3a,#173a12)}.n2{background:linear-gradient(135deg,#2a7a6b,#0d2e2a)}
+.n3{background:linear-gradient(135deg,#8a6a2b,#33230a)}.n4{background:linear-gradient(135deg,#3a5f8a,#0f1e33)}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px}
+.gal div{border-radius:14px;background-size:cover;background-position:center;position:relative;overflow:hidden;transition:.4s}
+.gal div:hover{transform:scale(1.03);z-index:2;box-shadow:var(--shadow)}
+.gal div:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal div:nth-child(6){grid-column:span 2}
+.g1{background-image:url(assets/g1.jpg),linear-gradient(135deg,#6b5412,#1d1918)}
+.g2{background-image:url(assets/g2.jpg),linear-gradient(135deg,#b8862b,#3a2808)}
+.g3{background-image:url(assets/g3.jpg),linear-gradient(135deg,#355c7a,#0f1e2a)}
+.g4{background-image:url(assets/g4.jpg),linear-gradient(135deg,#7a3b3b,#2a0f0f)}
+.g5{background-image:url(assets/g5.jpg),linear-gradient(135deg,#4a7a35,#142a0d)}
+.g6{background-image:url(assets/g6.jpg),linear-gradient(135deg,#8a6a2b,#2a1f0a)}
+.g7{background-image:url(assets/g7.jpg),linear-gradient(135deg,#2a6b6b,#0d2a2a)}
+.gal div:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.12),transparent 55%)}
+.gnote{text-align:center;color:var(--muted);font-size:14px;margin-top:18px}
+
+/* why */
+.why{background:var(--green);color:#fff}
+.why .title h2{color:#fff}.why .title p{color:#cfc9b3}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats div{padding:26px 10px;border:1px solid rgba(247,217,58,.3);border-radius:var(--radius)}
+.stats b{display:block;font:700 40px 'Cormorant Garamond',serif;color:var(--gold2)}
+.stats span{font-size:15px;color:#d8d2bd}
+.love{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.love blockquote{background:rgba(255,255,255,.06);padding:26px;border-radius:var(--radius);border-left:3px solid var(--gold)}
+.love blockquote p{font-style:italic;color:#ece6d0}
+.love cite{display:block;margin-top:10px;font-style:normal;color:var(--gold2);font-size:14px}
+
+/* faq */
+.faq{max-width:800px;margin:auto}
+details{background:#fff;border:1px solid #eee6cd;border-radius:14px;margin-bottom:12px;padding:0 22px}
+summary{cursor:pointer;padding:18px 0;font-weight:600;color:var(--green);list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--gold);font-size:24px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{padding-bottom:18px;color:#55554a}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
+.cinfo{background:var(--green);color:#fff;border-radius:var(--radius);padding:38px}
+.cinfo h3{font-size:26px;color:var(--gold2);margin-bottom:18px}
+.cinfo .row{display:flex;gap:14px;margin-bottom:18px}
+.cinfo .row i{font-style:normal;width:42px;height:42px;flex:none;border-radius:50%;background:rgba(247,217,58,.2);display:grid;place-items:center;color:var(--gold2)}
+.cinfo small{color:#bdb8a3;display:block;font-size:13px}
+.map{border-radius:var(--radius);overflow:hidden;min-height:260px;margin-top:10px}
+.map iframe{width:100%;height:100%;min-height:260px;border:0}
+.contact-form{background:#fff;border-radius:var(--radius);padding:34px;border:1px solid #eee6cd;display:grid;gap:14px}
+.contact-form h3{color:var(--green);font-size:24px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* footer */
+footer{background:#0f0d0c;color:#bdb8a3;padding:50px 0 24px;text-align:center;font-size:15px}
+footer .logo{justify-content:center;margin-bottom:12px}
+footer .links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:16px 0}
+footer .links a:hover{color:var(--gold2)}
+footer small{display:block;margin-top:18px;color:#7d7a68}
+
+/* floating */
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:12px}
+.fab a{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:26px;box-shadow:0 8px 22px rgba(0,0,0,.3);transition:.3s;color:#fff}
+.fab a:hover{transform:scale(1.1)}
+.fab .wa{background:#25d366}.fab .call{background:var(--gold);color:var(--green)}
+.reveal{opacity:0;transform:translateY(30px);transition:1s}
+.reveal.in{opacity:1;transform:none}
+
+/* mobile */
+@media(max-width:980px){
+  .grid3,.svc,.near,.stats,.love{grid-template-columns:1fr 1fr}
+  .bbox{grid-template-columns:1fr 1fr}.bbox .btn{grid-column:span 2}
+  .about,.contact,.signature{grid-template-columns:1fr}
+  .float-card{right:12px}
+  .gal{grid-template-columns:1fr 1fr}.gal div:nth-child(6){grid-column:span 1}
+  .menu{grid-template-columns:1fr}
+}
+@media(max-width:820px){
+  .burger{display:block}
+  nav{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--green);transform:translateX(100%);transition:.4s;padding:90px 30px;box-shadow:-10px 0 40px rgba(0,0,0,.4)}
+  nav.open{transform:none}
+  nav ul{flex-direction:column;gap:22px}
+  nav a{font-size:18px}
+  .actions .btn{display:none}
+}
+@media(max-width:600px){
+  body{font-size:16px}section{padding:64px 0}
+  .grid3,.svc,.near,.stats,.love,.two{grid-template-columns:1fr}
+  .bbox{grid-template-columns:1fr}.bbox .btn{grid-column:auto}
+  .hero{padding-top:110px}
+  .feat-mini{grid-template-columns:1fr}
+  .logo small{display:none}
+  .near .c{min-height:160px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body data-lang="bn">
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Cha Luxury">
+      <img src="assets/logo.jpg" alt="Cha Luxury logo" class="logoimg">
+      <span><b>CHA LUXURY</b><small>Hotel &amp; Restaurant</small></span>
+    </a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#about"><span class="bn">আমাদের কথা</span><span class="en">About</span></a></li>
+        <li><a href="#rooms"><span class="bn">রুম</span><span class="en">Rooms</span></a></li>
+        <li><a href="#dining"><span class="bn">রেস্টুরেন্ট</span><span class="en">Dining</span></a></li>
+        <li><a href="#services"><span class="bn">সেবা</span><span class="en">Services</span></a></li>
+        <li><a href="#explore"><span class="bn">ঘুরে দেখুন</span><span class="en">Explore</span></a></li>
+        <li><a href="#gallery"><span class="bn">গ্যালারি</span><span class="en">Gallery</span></a></li>
+        <li><a href="#contact"><span class="bn">যোগাযোগ</span><span class="en">Contact</span></a></li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-l="bn" class="on">বাংলা</button><button data-l="en">EN</button>
+      </div>
+      <a href="#book" class="btn btn-gold"><span class="bn">বুক করুন</span><span class="en">Book Now</span></a>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="bn">শ্রীমঙ্গল · চায়ের রাজধানী</span><span class="en">Sreemangal · Tea Capital of Bangladesh</span></div>
+    <h1>
+      <span class="bn">চা-বাগানের কোলে, <em>বিলাসী আতিথেয়তা</em></span>
+      <span class="en">Where Tea Hills Meet <em>Quiet Luxury</em></span>
+    </h1>
+    <p class="tagline serif">“Life tastes better with Cha Luxury”</p>
+    <p class="lead">
+      <span class="bn">আরামদায়ক এসি রুম, সুস্বাদু খাবার আর আন্তরিক সেবা। পরিবার, বন্ধু বা অফিস ট্রিপ, শ্রীমঙ্গলে আপনার ঠিকানা Cha Luxury।</span>
+      <span class="en">Comfortable air-conditioned rooms, delicious food and heartfelt service. Family, friends or corporate trip, your home in Sreemangal.</span>
+    </p>
+    <div class="cta">
+      <a href="#book" class="btn btn-gold"><span class="bn">রুম বুক করুন</span><span class="en">Reserve a Room</span></a>
+      <a href="#dining" class="btn btn-line"><span class="bn">মেনু দেখুন</span><span class="en">View Menu</span></a>
+    </div>
+    <div class="badges">
+      <span><span class="stars">★★★</span> <span class="bn">৩ স্টার হোটেল</span><span class="en">3-Star Hotel</span></span>
+      <span>🕒 <span class="bn">২৪ ঘণ্টা রিসেপশন</span><span class="en">24h Reception</span></span>
+      <span>🅿️ <span class="bn">ফ্রি পার্কিং</span><span class="en">Free Parking</span></span>
+      <span>🍃 <span class="bn">চা জাদুঘরের কাছে</span><span class="en">Near Tea Museum</span></span>
+    </div>
+  </div>
+  <svg class="tea-hills" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 90C200 30 380 130 620 80s420-70 640-10c80 22 130 20 180 5v85H0z" fill="#faf6ec"/>
+    <path d="M0 110C240 60 420 140 700 100s460-60 740 0v50H0z" fill="#faf6ec" opacity=".6"/>
+  </svg>
+</section>
+
+<!-- BOOKING -->
+<div class="booking" id="book">
+  <div class="wrap">
+    <form class="bbox" id="bookForm">
+      <div><label><span class="bn">চেক-ইন</span><span class="en">Check-in</span></label><input type="date" id="ci" required></div>
+      <div><label><span class="bn">চেক-আউট</span><span class="en">Check-out</span></label><input type="date" id="co" required></div>
+      <div><label><span class="bn">অতিথি</span><span class="en">Guests</span></label>
+        <select id="gs"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div>
+      <div><label><span class="bn">রুমের ধরন</span><span class="en">Room type</span></label>
+        <select id="rt">
+          <option>Deluxe Double</option><option>Deluxe Twin</option><option>Family Room</option>
+          <option>Deluxe Family Suite</option><option>Classic Quadruple</option><option>Guest Room</option>
+        </select></div>
+      <button class="btn btn-gold" type="submit"><span class="bn">WhatsApp-এ কনফার্ম</span><span class="en">Confirm on WhatsApp</span></button>
+    </form>
+    <p class="bnote"><span class="bn">অনলাইন পেমেন্ট ছাড়াই বুকিং, আমাদের টিম সরাসরি আপনাকে নিশ্চিত করবে।</span><span class="en">No online payment needed. Our team will confirm your booking directly.</span></p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about">
+    <div class="about-art reveal">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="rgba(247,217,58,.25)" stroke-width="2">
+          <path d="M-20 380C80 330 140 400 240 350s140-30 200-10"/><path d="M-20 410C80 360 140 430 240 380s140-30 200-10"/>
+          <path d="M-20 440C80 390 140 460 240 410s140-30 200-10"/><path d="M-20 470C80 420 140 490 240 440s140-30 200-10"/>
+        </g>
+        <circle cx="300" cy="110" r="46" fill="rgba(247,217,58,.3)"/>
+      </svg>
+      <div class="float-card"><b>24/7</b><span class="bn">রিসেপশন ও নিরাপত্তা সেবা</span><span class="en">Reception &amp; security, around the clock</span></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--gold)"><span class="bn">আমাদের কথা</span><span class="en">Our Story</span></span>
+      <h2><span class="bn">শ্রীমঙ্গলে আপনার আরামের ঠিকানা</span><span class="en">Your Place of Comfort in Sreemangal</span></h2>
+      <p class="bn">সাগরদীঘি রোডে, চা জাদুঘর থেকে মাত্র ৫ মিনিটের হাঁটা পথে Cha Luxury Hotel &amp; Restaurant। সবুজ চা-বাগান, লাউয়াছড়া জাতীয় উদ্যান আর হামহাম ঝরনার কাছাকাছি থেকে শ্রীমঙ্গলের প্রকৃতি উপভোগ করুন নিশ্চিন্তে।</p>
+      <p class="en">On Sagardighi Road, just a 5-minute walk from the Tea Museum, Cha Luxury Hotel &amp; Restaurant puts you close to emerald tea gardens, Lawachara National Park and Ham Ham Waterfall.</p>
+      <p class="bn">ব্যালকনিসহ এসি রুম, নিজস্ব রেস্টুরেন্ট, সহজ পার্কিং আর যত্নশীল স্টাফ, সব মিলিয়ে ভ্রমণ হোক ঝামেলাহীন।</p>
+      <p class="en">Air-conditioned rooms with balconies, an in-house restaurant, easy parking and caring staff: a stress-free stay from arrival to farewell.</p>
+      <div class="feat-mini">
+        <div><i>✓</i><span class="bn">ব্যালকনিসহ এসি রুম</span><span class="en">AC rooms with balcony</span></div>
+        <div><i>✓</i><span class="bn">নিজস্ব রেস্টুরেন্ট</span><span class="en">In-house restaurant</span></div>
+        <div><i>✓</i><span class="bn">লিফট ও নিরাপত্তা</span><span class="en">Lift &amp; 24h security</span></div>
+        <div><i>✓</i><span class="bn">মিটিং / ব্যানকোয়েট</span><span class="en">Meeting &amp; banquet</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section class="rooms" id="rooms">
+  <div class="wrap">
+    <div class="title reveal">
+      <div class="tag"><span class="bn">রুম ও স্যুট</span><span class="en">Rooms &amp; Suites</span></div>
+      <h2><span class="bn">আপনার পছন্দের রুম বেছে নিন</span><span class="en">Choose Your Perfect Stay</span></h2>
+      <p><span class="bn">একা, জুটি, পরিবার বা বন্ধুদের দল, সবার জন্য আছে মানানসই রুম।</span><span class="en">Solo, couples, families or groups, there is a room for everyone.</span></p>
+      <div class="orn">❖</div>
+    </div>
+    <div class="grid3">
+      <article class="room reveal"><div class="img r1"><span><span class="bn">জনপ্রিয়</span><span class="en">Popular</span></span></div><div class="body">
+        <h3>Deluxe Double Room</h3><p class="bn">দম্পতির জন্য আরামদায়ক কিং বেড ও ব্যালকনি।</p><p class="en">Cozy double bed and balcony, ideal for couples.</p>
+        <ul><li>AC</li><li>Balcony</li><li>Smart TV</li><li>Mini Fridge</li></ul>
+        <a class="btn" href="#book" data-room="Deluxe Double"><span class="bn">বুক করুন</span><span class="en">Book this room</span></a></div></article>
+      <article class="room reveal"><div class="img r2"></div><div class="body">
+        <h3>Deluxe Twin Room</h3><p class="bn">বন্ধু বা সহকর্মীদের জন্য দুটি আলাদা বিছানা।</p><p class="en">Two separate beds for friends or colleagues.</p>
+        <ul><li>AC</li><li>Balcony</li><li>Smart TV</li><li>Kettle</li></ul>
+        <a class="btn" href="#book" data-room="Deluxe Twin"><span class="bn">বুক করুন</span><span class="en">Book this room</span></a></div></article>
+      <article class="room reveal"><div class="img r3"><span><span class="bn">পরিবারের জন্য</span><span class="en">Family</span></span></div><div class="body">
+        <h3>Family Room</h3><p class="bn">ছোট পরিবারের জন্য প্রশস্ত ও নিরিবিলি রুম।</p><p class="en">Spacious, peaceful room for small families.</p>
+        <ul><li>AC</li><li>3–4 Guests</li><li>Smart TV</li><li>Fridge</li></ul>
+        <a class="btn" href="#book" data-room="Family Room"><span class="bn">বুক করুন</span><span class="en">Book this room</span></a></div></article>
+      <article class="room reveal"><div class="img r4"><span><span class="bn">প্রিমিয়াম</span><span class="en">Premium</span></span></div><div class="body">
+        <h3>Deluxe Family Suite</h3><p class="bn">বড় পরিবারের জন্য সর্বোচ্চ স্থান ও আরাম।</p><p class="en">Maximum space and comfort for larger families.</p>
+        <ul><li>AC</li><li>Suite</li><li>Balcony</li><li>City View</li></ul>
+        <a class="btn" href="#book" data-room="Deluxe Family Suite"><span class="bn">বুক করুন</span><span class="en">Book this room</span></a></div></article>
+      <article class="room reveal"><div class="img r5"></div><div class="body">
+        <h3>Classic Quadruple Room</h3><p class="bn">চারজনের গ্রুপের জন্য সাশ্রয়ী ও আরামদায়ক।</p><p class="en">Comfortable, value-friendly stay for groups of four.</p>
+        <ul><li>AC</li><li>4 Guests</li><li>TV</li><li>Kettle</li></ul>
+        <a class="btn" href="#book" data-room="Classic Quadruple"><span class="bn">বুক করুন</span><span class="en">Book this room</span></a></div></article>
+      <article class="room reveal"><div class="img r6"></div><div class="body">
+        <h3>Guest Room</h3><p class="bn">সরল, পরিচ্ছন্ন ও বাজেট-বান্ধব থাকার ব্যবস্থা।</p><p class="en">Simple, clean and budget-friendly accommodation.</p>
+        <ul><li>AC</li><li>Clean Linen</li><li>TV</li><li>Wi-Fi</li></ul>
+        <a class="btn" href="#book" data-room="Guest Room"><span class="bn">বুক করুন</span><span class="en">Book this room</span></a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- DINING -->
+<section class="dining" id="dining">
+  <div class="wrap">
+    <div class="title reveal">
+      <div class="tag" style="color:var(--gold2)"><span class="bn">রেস্টুরেন্ট</span><span class="en">Restaurant</span></div>
+      <h2><span class="bn">স্বাদের এক অনন্য যাত্রা</span><span class="en">A Journey of Flavours</span></h2>
+      <p><span class="bn">দেশি স্বাদ থেকে চাইনিজ, ফাস্টফুড আর শ্রীমঙ্গলের বিখ্যাত চা, সবই এক ছাদের নিচে।</span><span class="en">From local favourites to Chinese, fast food and Sreemangal's famous tea, all under one roof.</span></p>
+      <div class="orn">❖</div>
+    </div>
+
+    <div class="signature reveal">
+      <div class="img"></div>
+      <div class="txt">
+        <div class="eyebrow"><span class="bn">সিগনেচার</span><span class="en">Signature</span></div>
+        <h3><span class="bn">সাত রঙের চা</span><span class="en">Seven-Layer Tea</span></h3>
+        <p><span class="bn">শ্রীমঙ্গলে এসে সাত লেয়ারের চা না খেলে ভ্রমণ অসম্পূর্ণ। আমাদের রেস্টুরেন্টে উপভোগ করুন গরম, সুগন্ধি চা।</span><span class="en">A trip to Sreemangal is incomplete without its layered tea. Enjoy it fresh and fragrant at our restaurant.</span></p>
+        <div class="layers"><i style="background:#5a2a0a"></i><i style="background:#8a4b14"></i><i style="background:#b9701f"></i><i style="background:#d99a3a"></i><i style="background:#e8bb6a"></i><i style="background:#f0d595"></i><i style="background:#f8ebc4"></i></div>
+      </div>
+    </div>
+
+    <div class="tabs" id="tabs">
+      <button class="on" data-t="m1"><span class="bn">দেশি</span><span class="en">Local</span></button>
+      <button data-t="m2"><span class="bn">চাইনিজ</span><span class="en">Chinese</span></button>
+      <button data-t="m3"><span class="bn">নাস্তা</span><span class="en">Breakfast</span></button>
+      <button data-t="m4"><span class="bn">চা ও পানীয়</span><span class="en">Tea &amp; Drinks</span></button>
+    </div>
+
+    <div class="menu on" id="m1">
+      <div class="item"><div><h4><span class="bn">কাচ্চি বিরিয়ানি</span><span class="en">Kacchi Biryani</span></h4><p class="bn">খাঁটি মাংস ও সুগন্ধি বাসমতি চাল</p><p class="en">Tender meat, fragrant basmati rice</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">ভুনা খিচুড়ি</span><span class="en">Bhuna Khichuri</span></h4><p class="bn">বৃষ্টির দিনের সেরা সঙ্গী</p><p class="en">The perfect rainy-day comfort</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">রূপচাঁদা / ইলিশ ভাজা</span><span class="en">Fried Fish</span></h4><p class="bn">তাজা মাছ, মসলার ঝাল-স্বাদে</p><p class="en">Fresh fish, spiced to perfection</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">দেশি মুরগির ঝোল</span><span class="en">Deshi Chicken Curry</span></h4><p class="bn">ভাত বা পরোটার সাথে</p><p class="en">With rice or paratha</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">বিফ ভুনা</span><span class="en">Beef Bhuna</span></h4><p class="bn">ধীরে রান্না করা ঐতিহ্যবাহী স্বাদ</p><p class="en">Slow-cooked traditional flavour</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">সবজি ও ডাল</span><span class="en">Veggies &amp; Dal</span></h4><p class="bn">মৌসুমি তাজা সবজি</p><p class="en">Fresh seasonal vegetables</p></div><span class="dots"></span></div>
+    </div>
+    <div class="menu" id="m2">
+      <div class="item"><div><h4><span class="bn">চিকেন ফ্রাইড রাইস</span><span class="en">Chicken Fried Rice</span></h4><p class="bn">ডিম ও সবজির সাথে</p><p class="en">With egg and vegetables</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">থাই সুপ</span><span class="en">Thai Soup</span></h4><p class="bn">টক-ঝাল গরম স্যুপ</p><p class="en">Hot and sour, steaming</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">চিলি চিকেন</span><span class="en">Chilli Chicken</span></h4><p class="bn">ঝাল প্রিয়দের জন্য</p><p class="en">For spice lovers</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">চাউমিন</span><span class="en">Chowmein</span></h4><p class="bn">সবজি / চিকেন / মিক্সড</p><p class="en">Veg / Chicken / Mixed</p></div><span class="dots"></span></div>
+    </div>
+    <div class="menu" id="m3">
+      <div class="item"><div><h4><span class="bn">পরোটা-ভাজি-ডিম</span><span class="en">Paratha, Bhaji &amp; Egg</span></h4><p class="bn">দেশি সকালের নাস্তা</p><p class="en">Classic local breakfast</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">কন্টিনেন্টাল ব্রেকফাস্ট</span><span class="en">Continental Breakfast</span></h4><p class="bn">টোস্ট, ডিম, জুস</p><p class="en">Toast, eggs, juice</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">ইন-রুম ব্রেকফাস্ট</span><span class="en">In-room Breakfast</span></h4><p class="bn">আপনার রুমেই পরিবেশন</p><p class="en">Served in your room</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">ফ্রেশ ফ্রুটস</span><span class="en">Fresh Fruit Plate</span></h4><p class="bn">মৌসুমি ফল</p><p class="en">Seasonal fruits</p></div><span class="dots"></span></div>
+    </div>
+    <div class="menu" id="m4">
+      <div class="item"><div><h4><span class="bn">সাত লেয়ার টি</span><span class="en">Seven-Layer Tea</span></h4><p class="bn">শ্রীমঙ্গলের বিখ্যাত</p><p class="en">Sreemangal's famous</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">দুধ চা / লিকার চা</span><span class="en">Milk Tea / Liquor Tea</span></h4><p class="bn">স্থানীয় বাগানের পাতা</p><p class="en">Local estate leaves</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">গ্রিন টি</span><span class="en">Green Tea</span></h4><p class="bn">হালকা ও সতেজ</p><p class="en">Light and refreshing</p></div><span class="dots"></span></div>
+      <div class="item"><div><h4><span class="bn">কোল্ড কফি ও জুস</span><span class="en">Cold Coffee &amp; Juice</span></h4><p class="bn">গরমে প্রশান্তি</p><p class="en">Cool and refreshing</p></div><span class="dots"></span></div>
+    </div>
+    <p class="dnote"><span class="bn">* এটি নমুনা মেনু। আসল মেনু ও দাম আপনাদের তথ্য অনুযায়ী যুক্ত করা হবে।</span><span class="en">* Sample menu. Actual dishes and prices will be added from your details.</span></p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="title reveal">
+      <div class="tag"><span class="bn">সেবাসমূহ</span><span class="en">Services</span></div>
+      <h2><span class="bn">আপনার প্রতিটি মুহূর্ত হোক নিশ্চিন্ত</span><span class="en">Every Moment, Taken Care Of</span></h2>
+      <div class="orn">❖</div>
+    </div>
+    <div class="svc">
+      <div class="reveal"><div class="ic">🛎️</div><h3><span class="bn">২৪ ঘণ্টা রিসেপশন</span><span class="en">24h Reception</span></h3><p class="bn">যেকোনো সময় চেক-ইন ও সহায়তা</p><p class="en">Check-in and help at any hour</p></div>
+      <div class="reveal"><div class="ic">🛡️</div><h3><span class="bn">২৪ ঘণ্টা নিরাপত্তা</span><span class="en">24h Security</span></h3><p class="bn">নিশ্চিন্ত ও নিরাপদ থাকা</p><p class="en">A safe, secure stay</p></div>
+      <div class="reveal"><div class="ic">🍽️</div><h3><span class="bn">রুম সার্ভিস</span><span class="en">Room Service</span></h3><p class="bn">খাবার সরাসরি রুমে</p><p class="en">Meals delivered to your door</p></div>
+      <div class="reveal"><div class="ic">🚗</div><h3><span class="bn">গাড়ি ভাড়া</span><span class="en">Car Hire</span></h3><p class="bn">ঘোরাঘুরির জন্য গাড়ির ব্যবস্থা</p><p class="en">Cars arranged for sightseeing</p></div>
+      <div class="reveal"><div class="ic">🧺</div><h3><span class="bn">লন্ড্রি</span><span class="en">Laundry</span></h3><p class="bn">পরিচ্ছন্ন পোশাক সহজে</p><p class="en">Fresh clothes, hassle-free</p></div>
+      <div class="reveal"><div class="ic">🎫</div><h3><span class="bn">ট্যুর সহায়তা</span><span class="en">Tour Assistance</span></h3><p class="bn">দর্শনীয় স্থান ও টিকিট গাইড</p><p class="en">Sightseeing and ticket help</p></div>
+      <div class="reveal"><div class="ic">🅿️</div><h3><span class="bn">ফ্রি পার্কিং</span><span class="en">Free Parking</span></h3><p class="bn">নিজের গাড়ি নিয়ে নিশ্চিন্তে আসুন</p><p class="en">Bring your own car with ease</p></div>
+      <div class="reveal"><div class="ic">🏛️</div><h3><span class="bn">মিটিং ও ব্যানকোয়েট</span><span class="en">Meeting &amp; Banquet</span></h3><p class="bn">অফিস ট্রিপ ও ছোট অনুষ্ঠানের জন্য</p><p class="en">For corporate trips &amp; small events</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE -->
+<section class="explore" id="explore">
+  <div class="wrap">
+    <div class="title reveal">
+      <div class="tag"><span class="bn">ঘুরে দেখুন</span><span class="en">Explore</span></div>
+      <h2><span class="bn">কাছেই শ্রীমঙ্গলের সেরা আকর্ষণ</span><span class="en">Sreemangal's Best, Right Next Door</span></h2>
+      <div class="orn">❖</div>
+    </div>
+    <div class="near">
+      <div class="c n1 reveal"><h3><span class="bn">চা জাদুঘর</span><span class="en">Tea Museum</span></h3><span class="bn">~৫ মিনিট হাঁটা</span><span class="en">~5 min walk</span></div>
+      <div class="c n2 reveal"><h3><span class="bn">হামহাম ঝরনা</span><span class="en">Ham Ham Waterfall</span></h3><span>২.৬ কি.মি.</span></div>
+      <div class="c n3 reveal"><h3><span class="bn">লাউয়াছড়া জাতীয় উদ্যান</span><span class="en">Lawachara National Park</span></h3><span class="bn">~১০ মিনিটের ড্রাইভ</span><span class="en">~10 min drive</span></div>
+      <div class="c n4 reveal"><h3><span class="bn">নীলকণ্ঠ টি কেবিন</span><span class="en">Nilkantha Tea Cabin</span></h3><span class="bn">সাত লেয়ার চায়ের জন্য</span><span class="en">For layered tea</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="title reveal">
+      <div class="tag"><span class="bn">গ্যালারি</span><span class="en">Gallery</span></div>
+      <h2><span class="bn">এক নজরে Cha Luxury</span><span class="en">Cha Luxury at a Glance</span></h2>
+      <div class="orn">❖</div>
+    </div>
+    <div class="gal reveal">
+      <div class="g1"></div><div class="g2"></div><div class="g3"></div><div class="g4"></div>
+      <div class="g5"></div><div class="g6"></div><div class="g7"></div>
+    </div>
+    <p class="gnote"><span class="bn">আপনাদের Facebook পেজের আসল ছবি ও রিলস এখানে যুক্ত হবে।</span><span class="en">Your real Facebook photos and reels will be placed here.</span></p>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="wrap">
+    <div class="title reveal">
+      <div class="tag" style="color:var(--gold2)"><span class="bn">কেন আমরা</span><span class="en">Why Us</span></div>
+      <h2><span class="bn">অতিথিরা যা ভালোবাসেন</span><span class="en">What Guests Love</span></h2>
+      <div class="orn">❖</div>
+    </div>
+    <div class="stats reveal">
+      <div><b>★★★</b><span class="bn">৩ স্টার মান</span><span class="en">3-Star Standard</span></div>
+      <div><b>24/7</b><span class="bn">রিসেপশন</span><span class="en">Reception</span></div>
+      <div><b>5 min</b><span class="bn">চা জাদুঘর</span><span class="en">To Tea Museum</span></div>
+      <div><b>6</b><span class="bn">রুমের ধরন</span><span class="en">Room Types</span></div>
+    </div>
+    <div class="love">
+      <blockquote class="reveal"><p class="bn">“বারান্দা আর অবস্থান দুটোই দারুণ।”</p><p class="en">“Loved the balcony and the location.”</p><cite>— Booking.com guest</cite></blockquote>
+      <blockquote class="reveal"><p class="bn">“ওয়েটার ও শেফ অত্যন্ত আন্তরিক, নিজেকে স্বাগত মনে হয়েছে।”</p><p class="en">“Waiter and chef were kind and made us feel welcome.”</p><cite>— Booking.com guest</cite></blockquote>
+      <blockquote class="reveal"><p class="bn">“শহরের কেন্দ্রে, শান্ত ও পরিষ্কার, স্টাফরা চমৎকার।”</p><p class="en">“Central, calm and clean, with fantastic staff.”</p><cite>— Booking.com guest</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="title reveal">
+      <div class="tag"><span class="bn">সাধারণ প্রশ্ন</span><span class="en">FAQ</span></div>
+      <h2><span class="bn">আপনার জানার বিষয়গুলো</span><span class="en">Good to Know</span></h2>
+    </div>
+    <div class="faq">
+      <details><summary><span class="bn">চেক-ইন ও চেক-আউট কখন?</span><span class="en">What are check-in and check-out times?</span></summary><p class="bn">চেক-ইন দুপুর ২:০০ থেকে, চেক-আউট দুপুর ১২:০০ পর্যন্ত।</p><p class="en">Check-in from 2:00 PM, check-out until 12:00 noon.</p></details>
+      <details><summary><span class="bn">পার্কিং সুবিধা আছে কি?</span><span class="en">Is parking available?</span></summary><p class="bn">হ্যাঁ, অতিথিদের জন্য বিনামূল্যে পার্কিং আছে।</p><p class="en">Yes, free parking is available for guests.</p></details>
+      <details><summary><span class="bn">রুমে কী কী সুবিধা আছে?</span><span class="en">What do the rooms include?</span></summary><p class="bn">এসি, ফ্ল্যাট-স্ক্রিন টিভি, ব্যালকনি, ফ্রিজ ও ইলেকট্রিক কেটলি।</p><p class="en">Air-conditioning, flat-screen TV, balcony, fridge and electric kettle.</p></details>
+      <details><summary><span class="bn">পোষা প্রাণী আনা যাবে?</span><span class="en">Are pets allowed?</span></summary><p class="bn">দুঃখিত, পোষা প্রাণী অনুমোদিত নয়।</p><p class="en">Sorry, pets are not allowed.</p></details>
+      <details><summary><span class="bn">কীভাবে বুক করব?</span><span class="en">How do I book?</span></summary><p class="bn">উপরের ফর্ম পূরণ করে WhatsApp-এ পাঠান অথবা সরাসরি কল করুন।</p><p class="en">Fill the form above and send via WhatsApp, or call us directly.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="title reveal">
+      <div class="tag"><span class="bn">যোগাযোগ</span><span class="en">Contact</span></div>
+      <h2><span class="bn">আমরা আপনার অপেক্ষায়</span><span class="en">We're Waiting for You</span></h2>
+      <div class="orn">❖</div>
+    </div>
+    <div class="contact">
+      <div class="cinfo reveal">
+        <h3><span class="bn">ঠিকানা ও যোগাযোগ</span><span class="en">Find &amp; Reach Us</span></h3>
+        <div class="row"><i>📍</i><div><small><span class="bn">ঠিকানা</span><span class="en">Address</span></small><span class="bn">সাগরদীঘি রোড, শ্রীমঙ্গল, মৌলভীবাজার, সিলেট</span><span class="en">Sagardighi Road, Sreemangal, Moulvibazar, Sylhet</span></div></div>
+        <div class="row"><i>📞</i><div><small><span class="bn">ফোন</span><span class="en">Phone</span></small><a id="phoneTxt" href="#">+880 1XXX-XXXXXX</a></div></div>
+        <div class="row"><i>💬</i><div><small>Facebook</small><a href="https://www.facebook.com/chaluxury/" target="_blank" rel="noopener">facebook.com/chaluxury</a></div></div>
+        <div class="row"><i>🕒</i><div><small><span class="bn">সময়</span><span class="en">Hours</span></small><span class="bn">রিসেপশন ২৪ ঘণ্টা খোলা</span><span class="en">Reception open 24 hours</span></div></div>
+        <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=Cha+Luxury+Hotel+%26+Restaurant+Sreemangal&output=embed"></iframe></div>
+      </div>
+      <form class="contact-form reveal" id="msgForm">
+        <h3><span class="bn">আমাদের মেসেজ পাঠান</span><span class="en">Send Us a Message</span></h3>
+        <div class="two"><input id="mn" required placeholder="আপনার নাম / Your name" aria-label="Name"><input id="mp" required type="tel" placeholder="ফোন / Phone" aria-label="Phone"></div>
+        <textarea id="mm" rows="5" placeholder="আপনার বার্তা / Your message" aria-label="Message"></textarea>
+        <button class="btn btn-gold" type="submit"><span class="bn">WhatsApp-এ পাঠান</span><span class="en">Send via WhatsApp</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo"><img src="assets/logo.jpg" alt="Cha Luxury logo" class="logoimg"><span><b>CHA LUXURY</b><small>Hotel &amp; Restaurant</small></span></a>
+    <p class="bn">শ্রীমঙ্গলের চা-বাগানের কোলে আপনার আরামের ঠিকানা।</p>
+    <p class="en">Your place of comfort among Sreemangal's tea gardens.</p>
+    <div class="links"><a href="#rooms"><span class="bn">রুম</span><span class="en">Rooms</span></a><a href="#dining"><span class="bn">রেস্টুরেন্ট</span><span class="en">Dining</span></a><a href="#gallery"><span class="bn">গ্যালারি</span><span class="en">Gallery</span></a><a href="#contact"><span class="bn">যোগাযোগ</span><span class="en">Contact</span></a></div>
+    <small>© 2026 Cha Luxury Hotel &amp; Restaurant. Demo design by Irfan · irfan.itflor.com</small>
+  </div>
+</footer>
+
+<div class="fab">
+  <a class="wa" id="fabWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+  <a class="call" id="fabCall" href="#" aria-label="Call">📞</a>
+</div>
+
+<script>
+/* ====== CONFIG: replace with real numbers before going live ====== */
+const WHATSAPP = "8801XXXXXXXXX";   // country code + number, no + or spaces
+const PHONE    = "+8801XXXXXXXXX";
+/* ================================================================= */
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+const body=document.body;
+
+// language
+function setLang(l){
+  body.dataset.lang=l; document.documentElement.lang=l;
+  $$('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
+  try{localStorage.setItem('cha-lang',l)}catch(e){}
+}
+$$('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+try{setLang(localStorage.getItem('cha-lang')||'bn')}catch(e){}
+
+// header / mobile nav
+const hdr=$('#hdr');
+const onScroll=()=>hdr.classList.toggle('solid',scrollY>40);
+addEventListener('scroll',onScroll);onScroll();
+$('#burger').onclick=()=>$('#nav').classList.toggle('open');
+$$('#nav a').forEach(a=>a.onclick=()=>$('#nav').classList.remove('open'));
+
+// menu tabs
+$$('#tabs button').forEach(b=>b.onclick=()=>{
+  $$('#tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  $$('.menu').forEach(m=>m.classList.toggle('on',m.id===b.dataset.t));
+});
+
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+$$('.reveal').forEach(el=>io.observe(el));
+
+// dates
+const today=new Date().toISOString().slice(0,10);
+const ci=$('#ci'),co=$('#co');ci.min=co.min=today;
+ci.onchange=()=>{co.min=ci.value;if(co.value&&co.value<=ci.value)co.value=''};
+
+// room quick-select
+$$('[data-room]').forEach(a=>a.addEventListener('click',()=>{$('#rt').value=a.dataset.room}));
+
+// WhatsApp helpers
+const wa=t=>`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
+$('#fabWa').href=wa('আসসালামু আলাইকুম, আমি রুম বুকিং সম্পর্কে জানতে চাই।');
+$('#fabCall').href='tel:'+PHONE;
+$('#phoneTxt').href='tel:'+PHONE;$('#phoneTxt').textContent=PHONE;
+
+$('#bookForm').onsubmit=e=>{
+  e.preventDefault();
+  const t=`আসসালামু আলাইকুম, রুম বুকিং করতে চাই।\nচেক-ইন: ${ci.value}\nচেক-আউট: ${co.value}\nঅতিথি: ${$('#gs').value}\nরুম: ${$('#rt').value}`;
+  window.open(wa(t),'_blank');
+};
+$('#msgForm').onsubmit=e=>{
+  e.preventDefault();
+  window.open(wa(`নাম: ${$('#mn').value}\nফোন: ${$('#mp').value}\nবার্তা: ${$('#mm').value}`),'_blank');
+};
+</script>
+</body>
+</html>
