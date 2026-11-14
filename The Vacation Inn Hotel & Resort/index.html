@@ -127,6 +127,7 @@
       <a href="#amenities" data-en="Amenities">সুবিধাসমূহ</a>
       <a href="#tours" data-en="Bandarban Tours">বান্দরবান ট্যুর</a>
       <a href="#dining" data-en="Dining">পাহাড়ি ডাইনিং</a>
+      <a href="#gallery" data-en="Real Photos">আসল ছবি</a>
       <a href="#reels" data-en="Reels">ভিডিও রিলস</a>
       <a href="#calculator" data-en="Estimator">খরচ হিসাব</a>
       <a href="#contact" data-en="Contact">যোগাযোগ</a>
@@ -167,6 +168,7 @@
       <a href="#amenities" data-en="Amenities">সুবিধাসমূহ</a>
       <a href="#tours" data-en="Bandarban Tours">বান্দরবান ট্যুর</a>
       <a href="#dining" data-en="Dining">পাহাড়ি ডাইনিং</a>
+      <a href="#gallery" data-en="Real Photos">আসল ছবি গ্যালারি</a>
       <a href="#reels" data-en="Reels">ভিডিও রিলস</a>
       <a href="#calculator" data-en="Estimator">ট্যুর ও রুম ক্যালকুলেটর</a>
       <a href="#contact" data-en="Contact">যোগাযোগ ও লোকেশন</a>
@@ -515,7 +517,35 @@
 </section>
 
 <!-- ====================================================
-     7. VIDEO REELS SECTION (Authentic Facebook Footage)
+     7. AUTHENTIC PROPERTY PHOTO GALLERY (100% Real Facebook Photos)
+     ==================================================== -->
+<section class="screen" id="gallery">
+  <div class="container">
+    <div class="section-head text-center">
+      <span class="sub-title"><svg><use href="#i-star"/></svg><span data-en="100% Real Property Photos">আসল ছবির গ্যালারি</span></span>
+      <h2 data-en="Experience The Vacation Inn Through <span class='gold'>Authentic Photos</span>">আসল ছবিতে দেখুন আমাদের <span class="gold">রিসোর্ট ও রুমের রূপ</span></h2>
+      <p class="head-lead mx-auto" data-en="Browse high-resolution, color-graded photos from our official Facebook page — showcasing genuine guest rooms, misty mountain balconies, highway entrance, and night ambience.">
+        আমাদের ফেসবুক পেজের আসল ছবিতে দেখে নিন রিসোর্টের সবুজ পাহাড়ি পরিবেশ, রাজকীয় কাপল ও ফ্যামিলি স্যুট, ব্যালকনি ভিউ এবং রাতের আলোকসজ্জা।
+      </p>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="gallery-tabs" role="tablist" aria-label="Photo Gallery Filters">
+      <button type="button" class="g-tab active" data-gfilter="all" aria-pressed="true">সব ছবি (All)</button>
+      <button type="button" class="g-tab" data-gfilter="exterior" aria-pressed="false">এক্সটেরিয়র ও ভিউ (Exterior)</button>
+      <button type="button" class="g-tab" data-gfilter="rooms" aria-pressed="false">রুম ও স্যুট (Rooms & Suites)</button>
+      <button type="button" class="g-tab" data-gfilter="amenities" aria-pressed="false">সুবিধাসমূহ (Amenities)</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Injected dynamically by main.js with all 15 authentic graded photos -->
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     8. VIDEO REELS SECTION (Authentic Facebook Footage)
      ==================================================== -->
 <section class="screen" id="reels">
   <div class="container">
@@ -920,18 +950,76 @@
   </div>
 </dialog>
 
-<!-- Video Reel Player Modal -->
+<!-- Video Reel Player Modal (Zero Black Screen • Cinema Showcase Lightbox) -->
 <dialog class="player" id="player" aria-label="Facebook Video Reel">
-  <button type="button" class="player-close" aria-label="Close Video"><svg><use href="#i-x"/></svg></button>
-  <div class="player-frame">
-    <iframe id="playerFrame" title="The Vacation Inn Video Reel" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+  <div class="player-box">
+    <div class="player-top">
+      <div class="player-brand-pill">
+        <img src="assets/img/logo.jpg" alt="" width="28" height="28" class="brand-logo">
+        <div>
+          <strong>The Vacation Inn</strong>
+          <small data-en="Official Facebook Reel • Bandarban">অফিশিয়াল ফেসবুক রিল • বান্দরবান</small>
+        </div>
+      </div>
+      <button type="button" class="player-close" id="playerClose" aria-label="Close Video"><svg><use href="#i-x"/></svg></button>
+    </div>
+
+    <div class="player-frame">
+      <img id="playerPoster" src="" alt="The Vacation Inn Reel Poster" class="player-poster">
+      <div class="player-gradient-top"></div>
+      <div class="player-gradient-bottom"></div>
+
+      <a id="playerPlayCenter" href="#" target="_blank" rel="noopener" class="player-play-trigger" aria-label="Play Reel on Facebook">
+        <span class="play-pulse"></span>
+        <svg><use href="#i-play"/></svg>
+      </a>
+
+      <div class="player-video-meta">
+        <div class="p-tags">
+          <span class="p-tag" id="playerTag">ভাইরাল রিল</span>
+          <span class="p-views" id="playerViews"><svg><use href="#i-play"/></svg> ১০০K+ ভিউ</span>
+          <span class="p-dur" id="playerDuration">০:৫৫ মিনিট</span>
+        </div>
+        <h3 id="playerTitle"></h3>
+        <p id="playerSub" data-en="The Vacation Inn Hotel & Resort • Bandarban">দ্যা ভ্যাকেশন ইন হোটেল অ্যান্ড রিসোর্ট • বান্দরবান</p>
+      </div>
+    </div>
+
+    <div class="player-foot">
+      <a id="playerFbMain" href="#" target="_blank" rel="noopener" class="btn btn-gold btn-block">
+        <svg><use href="#i-play"/></svg>
+        <span data-en="Watch Full HD Reel on Facebook">ফেসবুকে সম্পূর্ণ এইচডি রিল দেখুন</span>
+      </a>
+      <a id="playerWa" href="#" target="_blank" rel="noopener" class="btn btn-wa btn-block">
+        <svg><use href="#i-wa"/></svg>
+        <span data-en="Inquire This Room on WhatsApp">WhatsApp-এ এই রুম/প্যাকেজ বুক করুন</span>
+      </a>
+      <div class="player-guarantee">
+        <svg><use href="#i-check"/></svg>
+        <span data-en="Plays smoothly in HD with sound on Facebook App & Web">ফেসবুক অ্যাপ বা ব্রাউজারে ফুল এইচডি ও সাউন্ড সহ সরাসরি চলবে</span>
+      </div>
+    </div>
   </div>
-  <div class="player-foot">
-    <a id="playerFb" href="#" target="_blank" rel="noopener" data-en="View on Facebook">ফেসবুকে দেখুন &rarr;</a>
-    <a id="playerWa" href="#" target="_blank" rel="noopener" class="btn btn-wa btn-sm">
-      <svg><use href="#i-wa"/></svg>
-      <span data-en="Inquire on WhatsApp">WhatsApp-এ কথা বলুন</span>
-    </a>
+</dialog>
+
+<!-- Authentic Photo Lightbox Modal -->
+<dialog class="gallery-modal" id="galleryModal" aria-label="Authentic Photo Lightbox">
+  <div class="gm-box">
+    <button type="button" class="gm-close" id="gmClose" aria-label="Close Lightbox"><svg><use href="#i-x"/></svg></button>
+    <div class="gm-img-wrap">
+      <img id="gmImg" src="" alt="Resort Real Photo">
+    </div>
+    <div class="gm-foot">
+      <div>
+        <span class="gm-tag" id="gmTag">আসল ছবি</span>
+        <h3 id="gmTitle"></h3>
+        <p id="gmDesc"></p>
+      </div>
+      <a id="gmWa" href="#" target="_blank" rel="noopener" class="btn btn-wa btn-sm">
+        <svg><use href="#i-wa"/></svg>
+        <span data-en="Inquire on WhatsApp">WhatsApp-এ রুম বুক করুন</span>
+      </a>
+    </div>
   </div>
 </dialog>
 

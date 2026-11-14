@@ -8,7 +8,7 @@
   'use strict';
 
   // ====================================================
-  // 1. VERIFIED ROOMS & SUITES DATASET
+  // 1. VERIFIED ROOMS & SUITES DATASET (100% Real Graded Photos)
   // ====================================================
   const ROOMS = [
     {
@@ -19,18 +19,18 @@
       tagEn: 'Premium Couple AC',
       featuredTagBn: 'পাহাড় ভিউ স্পেশাল',
       featuredTagEn: 'Misty Hill Special',
-      heroBg: 'assets/gen/hero-bandarban.jpg',
-      img: 'assets/gen/room-couple.jpg',
+      heroBg: 'assets/img/graded/balcony-misty-mountain-view.jpg',
+      img: 'assets/img/graded/room-couple-honeymoon-swan.jpg',
       locBn: 'বান্দরবান-কেরানীহাট হাইওয়ে, জথ খামার',
       locEn: 'Bandarban-Keranihat Highway, Bandarban',
       titleBn: 'প্রিমিয়াম কাপল এসি রুম (প্রাইভেট হিল ভিউ ব্যালকনি)',
       titleEn: 'Premium Couple AC Room with Private Hill View Balcony',
       priceBn: '৳ ২,৫০০ / রাত',
       priceEn: '৳ 2,500 / night',
-      specsBn: ['১ কিং সাইজ বেড', 'মেঘ ও পাহাড় ভিউ ব্যালকনি', 'সাইলেন্ট এসি ও ওয়াই-ফাই', 'হট ওয়াটার গিজার বাথরুম'],
-      specsEn: ['1 King Size Bed', 'Misty Mountain Balcony', 'Silent Split AC & Wi-Fi', 'Hot Water Geyser Bath'],
-      descBn: 'বান্দরবানের কুয়াশাচ্ছন্ন পাহাড় ও মেঘের রূপ উপভোগ করার জন্য আমাদের সবচেয়ে জনপ্রিয় রোমান্টিক রুম। বড় গ্লাস ডোর, কাঠের ব্যালকনি, সাউন্ডপ্রুফ এসি, পরিষ্কার বিছানা ও ২৪ ঘণ্টা রুম সার্ভিস।',
-      descEn: 'Our most sought-after boutique hill retreat for couples. Features floor-to-ceiling balcony glass doors overlooking foggy green valleys, plush king bedding, whisper-quiet AC, and 24/7 personalized care.',
+      specsBn: ['১ কিং সাইজ বেড', 'মেঘ ও পাহাড় ভিউ ব্যালকনি', 'সাইলেন্ট এসি ও স্মার্ট টিভি', 'হট ওয়াটার গিজার বাথরুম'],
+      specsEn: ['1 King Size Bed', 'Misty Mountain Balcony', 'Silent Split AC & Smart TV', 'Hot Water Geyser Bath'],
+      descBn: 'বান্দরবানের কুয়াশাচ্ছন্ন পাহাড় ও মেঘের রূপ উপভোগ করার জন্য আমাদের সবচেয়ে জনপ্রিয় রোমান্টিক রুম। রাজহাঁস তোয়ালে আর্ট, এলইডি ভ্যানিটি মিরর, কাঠের ব্যালকনি ও সাউন্ডপ্রুফ এসি।',
+      descEn: 'Our most sought-after boutique hill retreat for couples. Features folded swan towel decor, backlit LED mirror, private wooden balcony overlooking foggy green valleys, and whisper-quiet AC.',
       phone: '+8801612505060'
     },
     {
@@ -41,18 +41,18 @@
       tagEn: 'Super Deluxe Family',
       featuredTagBn: 'ফ্যামিলি ফেভারিট',
       featuredTagEn: 'Family Favorite',
-      heroBg: 'assets/gen/room-family.jpg',
-      img: 'assets/gen/room-family.jpg',
+      heroBg: 'assets/img/graded/room-family-deluxe-dual-beds.jpg',
+      img: 'assets/img/graded/room-family-deluxe-dual-beds.jpg',
       locBn: 'বান্দরবান-কেরানীহাট হাইওয়ে, জথ খামার',
       locEn: 'Bandarban-Keranihat Highway, Bandarban',
       titleBn: 'সুপার ডিলাক্স এসি ফ্যামিলি স্যুট (৪-৫ জন)',
       titleEn: 'Super Deluxe AC Family Suite (4-5 Guests)',
       priceBn: '৳ ৩,৫০০ / রাত',
       priceEn: '৳ 3,500 / night',
-      specsBn: ['২টি বড় ডাবল বেড', 'প্যানোরামিক ব্যালকনি', 'স্প্লিট এসি ও স্মার্ট টিভি', 'সিটিং লাউঞ্জ ও ওয়ারড্রব'],
-      specsEn: ['2 Queen Beds', 'Panoramic Hill Balcony', 'Split AC & Smart TV', 'Sitting Lounge & Wardrobe'],
-      descBn: 'পরিবার বা ৪-৫ জনের ফ্রেন্ডস গ্রুপের জন্য তৈরি অত্যন্ত প্রশস্ত ও রাজকীয় স্যুট। দুটি বড় কমফোর্টেবল বিছানা, আধুনিক কাঠের ইন্টেরিয়র, বাচ্চাদের জন্য নিরাপদ পরিবেশ ও ডাইনিং সহায়তা।',
-      descEn: 'Generously appointed spacious suite tailored for family getaways and travel circles of 4-5 guests. Includes dual plush queen beds, scenic balcony overlooking tropical hills, and private lounge space.',
+      specsBn: ['২টি বড় ডাবল বেড', 'প্যানোরামিক ব্যালকনি', 'ফলস সিলিং স্পটলাইট', 'সিটিং লাউঞ্জ ও ওয়্যারড্রব'],
+      specsEn: ['2 Queen Beds', 'Panoramic Hill Balcony', 'False Ceiling Spotlights', 'Sitting Lounge & Wardrobe'],
+      descBn: 'পরিবার বা ৪-৫ জনের ফ্রেন্ডস গ্রুপের জন্য তৈরি অত্যন্ত প্রশস্ত ও রাজকীয় স্যুট। দুটি বড় ডাবল বিছানা, আধুনিক কাঠের সিলিং ও ইন্টেরিয়র, বাচ্চাদের জন্য নিরাপদ পরিবেশ ও ডাইনিং সহায়তা।',
+      descEn: 'Generously appointed spacious suite tailored for family getaways and travel circles of 4-5 guests. Includes dual plush queen beds, custom cove ceiling lighting, scenic balcony, and fitted wardrobes.',
       phone: '+8801612505060'
     },
     {
@@ -63,18 +63,18 @@
       tagEn: 'Comfort Couple AC',
       featuredTagBn: 'বাজেট কাপল',
       featuredTagEn: 'Budget Couple',
-      heroBg: 'assets/img/cover.jpg',
-      img: 'assets/img/room-couple-fb.jpg',
+      heroBg: 'assets/img/graded/exterior-day-hills.jpg',
+      img: 'assets/img/graded/room-suite-arched-mirror.jpg',
       locBn: 'বান্দরবান-কেরানীহাট হাইওয়ে, জথ খামার',
       locEn: 'Bandarban-Keranihat Highway, Bandarban',
-      titleBn: 'কমফোর্ট এসি কাপল বেডরুম',
-      titleEn: 'Comfort AC Couple Bed Room',
+      titleBn: 'কমফোর্ট এসি কাপল বেডরুম (আর্চড মিরর ও সোফা)',
+      titleEn: 'Comfort AC Couple Bed Room with Arched Mirror & Sofa',
       priceBn: '৳ ২,০০০ / রাত',
       priceEn: '৳ 2,000 / night',
-      specsBn: ['১ ডাবল বেড', 'পাহাড়ি বাতাসের জানালা', 'স্প্লিট এসি', 'হাই-স্পিড ওয়াই-ফাই'],
-      specsEn: ['1 Double Bed', 'Scenic Hill Window', 'Split AC Unit', 'High-Speed Wi-Fi'],
-      descBn: 'কাপল ও বাজেট সচেতন পর্যটকদের জন্য আরামদায়ক ও রুচিশীল রুম। পরিচ্ছন্ন সুতি চাদর, সাইলেন্ট কুলিং, ব্যাকআপ জেনারেটর পাওয়ার এবং শান্ত পাহাড়ি পরিবেশ।',
-      descEn: 'Cozy and delightful air-conditioned room crafted for couples exploring Bandarban. Spotless white linen, silent AC cooling, 24/7 generator backup, and high-speed Wi-Fi.',
+      specsBn: ['১ ডাবল বেড', 'আর্চড ফুল-লেন্থ মিরর', 'স্প্লিট এসি ও সোফা', 'হাই-স্পিড ওয়াই-ফাই'],
+      specsEn: ['1 Double Bed', 'Arched Full-Length Mirror', 'Split AC & Lounge Sofa', 'High-Speed Wi-Fi'],
+      descBn: 'কাপল ও বাজেট সচেতন পর্যটকদের জন্য আরামদায়ক ও রুচিশীল রুম। আর্চড ডিজাইনার ড্রেসিং মিরর, পরিচ্ছন্ন বিছানা, সাইলেন্ট কুলিং, ব্যাকআপ পাওয়ার এবং শান্ত পাহাড়ি পরিবেশ।',
+      descEn: 'Cozy and delightful air-conditioned room crafted for couples exploring Bandarban. Features an arched full-length dressing mirror, cozy sofa sitting, spotless linen, and high-speed Wi-Fi.',
       phone: '+8801612505060'
     },
     {
@@ -85,18 +85,18 @@
       tagEn: 'Economy Non-AC',
       featuredTagBn: 'সাশ্রয়ী স্টে',
       featuredTagEn: 'Budget Stay',
-      heroBg: 'assets/gen/tour-nilgiri.jpg',
-      img: 'assets/img/room-interior-fb.jpg',
+      heroBg: 'assets/img/graded/room-woodwork-interior.jpg',
+      img: 'assets/img/graded/room-canopy-bed-cozy.jpg',
       locBn: 'বান্দরবান-কেরানীহাট হাইওয়ে, জথ খামার',
       locEn: 'Bandarban-Keranihat Highway, Bandarban',
-      titleBn: 'ইকোনমি নন-এসি ডাবল বেডরুম',
-      titleEn: 'Economy Non-AC Double Bed Room',
+      titleBn: 'ইকোনমি নন-এসি ডাবল বেডরুম (ক্যানোপি বেড)',
+      titleEn: 'Economy Non-AC Double Bed Room with Canopy Frame',
       priceBn: '৳ ১,৪০০ / রাত',
       priceEn: '৳ 1,400 / night',
-      specsBn: ['১ ডাবল বেড', 'বাতাসযুক্ত পরিচ্ছন্ন পরিবেশ', 'এটাচড বাথরুম', 'ব্যাকপ্যাকার ফ্রেন্ডলি'],
-      specsEn: ['1 Double Bed', 'Naturally Breezy & Clean', 'Attached Bathroom', 'Backpacker Friendly'],
-      descBn: 'ব্যাকপ্যাকার, ছাত্র ও ট্র্যাকারদের জন্য সেরা সাশ্রয়ী অপশন। কম খরচে পরিষ্কার বিছানা, নিরাপদ পরিবেশ ও বান্দরবানের দর্শনীয় স্থানে যাওয়ার জিপ বুকিং সুবিধা।',
-      descEn: 'Ideal low-cost option for backpackers, student groups, and trekkers seeking clean, secure, and hassle-free accommodation in Bandarban Sadar.',
+      specsBn: ['১ কাঠের ক্যানোপি বেড', 'বাতাসযুক্ত পরিচ্ছন্ন পরিবেশ', 'মশারির নিরাপত্তা', 'ব্যাকপ্যাকার ফ্রেন্ডলি'],
+      specsEn: ['1 Timber Canopy Bed', 'Naturally Breezy & Clean', 'Full Mosquito Net Structure', 'Backpacker Friendly'],
+      descBn: 'ব্যাকপ্যাকার, ছাত্র ও ট্র্যাকারদের জন্য সেরা সাশ্রয়ী অপশন। ঐতিহ্যবাহী কাঠের ক্যানোপি খাট, কম খরচে পরিষ্কার বিছানা, নিরাপদ পরিবেশ ও বান্দরবানের দর্শনীয় স্থানে যাওয়ার জিপ বুকিং সুবিধা।',
+      descEn: 'Ideal low-cost option for backpackers, student groups, and trekkers seeking clean, secure, and hassle-free accommodation in Bandarban Sadar with classic timber woodwork.',
       phone: '+8801612505060'
     },
     {
@@ -107,61 +107,248 @@
       tagEn: 'VIP Panoramic Suite',
       featuredTagBn: 'ভিআইপি লাক্সারি',
       featuredTagEn: 'VIP Luxury',
-      heroBg: 'assets/img/exterior-night.jpg',
-      img: 'assets/img/exterior-night.jpg',
+      heroBg: 'assets/img/graded/exterior-night-garden.jpg',
+      img: 'assets/img/graded/room-balcony-doorway-view.jpg',
       locBn: 'বান্দরবান-কেরানীহাট হাইওয়ে, জথ খামার',
       locEn: 'Bandarban-Keranihat Highway, Bandarban',
       titleBn: 'ভিআইপি প্যানোরামিক হিল ভিউ স্যুট',
       titleEn: 'VIP Panoramic Hill View Suite',
       priceBn: '৳ ৪,২০০ / রাত',
       priceEn: '৳ 4,200 / night',
-      specsBn: ['১ কিং বেড + ১ ডিভান', '১৮০° মেঘ ও পাহাড় ভিউ', 'প্রিমিয়াম ইন্টেরিয়র', 'ভিআইপি রুম সার্ভিস'],
-      specsEn: ['1 King Bed + 1 Daybed', '180° Mountain View', 'Premium Hardwood Decor', 'VIP Room Service'],
-      descBn: 'সর্বোচ্চ আরাম ও আভিজাত্য নিশ্চিত করতে বিশেষ ভিআইপি স্যুট। বিশাল ব্যালকনি থেকে বান্দরবানের সবুজ পাহাড়ের দিগন্তজোড়া দৃশ্য, প্রিমিয়াম বেডিং ও স্পেশাল কেয়ার।',
-      descEn: 'The flagship luxury suite at The Vacation Inn. Features expansive private balconies with 180-degree mountain valley vistas, hand-crafted wooden aesthetics, and dedicated butler care.',
+      specsBn: ['১ কিং বেড + ১ ডিভান', '১৮০° মেঘ ও পাহাড় ভিউ ব্যালকনি', 'প্রিমিয়াম কাঠের ইন্টেরিয়র', 'ভিআইপি রুম সার্ভিস'],
+      specsEn: ['1 King Bed + 1 Daybed', '180° Mountain View Balcony', 'Premium Hardwood Decor', 'VIP Room Service'],
+      descBn: 'সর্বোচ্চ আরাম ও আভিজাত্য নিশ্চিত করতে বিশেষ ভিআইপি স্যুট। বিশাল কাঁচের দরজা দিয়ে সরাসরি ব্যালকনি ও বান্দরবানের সবুজ পাহাড়ের দিগন্তজোড়া দৃশ্য, প্রিমিয়াম বেডিং ও স্পেশাল কেয়ার।',
+      descEn: 'The flagship luxury suite at The Vacation Inn. Features expansive private glass doors opening to mountain valley vistas, hand-crafted wooden aesthetics, and dedicated care.',
+      phone: '+8801612505060'
+    },
+    {
+      id: 6,
+      type: 'couple',
+      featured: false,
+      tagBn: 'সুপিরিয়র ডাবল এসি',
+      tagEn: 'Superior Double AC',
+      featuredTagBn: 'আর্ট অ্যান্ড পিস',
+      featuredTagEn: 'Art & Peace',
+      heroBg: 'assets/img/graded/resort-banner-composite.jpg',
+      img: 'assets/img/graded/room-double-wall-art.jpg',
+      locBn: 'বান্দরবান-কেরানীহাট হাইওয়ে, জথ খামার',
+      locEn: 'Bandarban-Keranihat Highway, Bandarban',
+      titleBn: 'সুপিরিয়র ডাবল এসি বেডরুম (ওয়াল আর্ট ও নাইট ল্যাম্প)',
+      titleEn: 'Superior Double AC Bed Room with Landscape Art',
+      priceBn: '৳ ২,২০০ / রাত',
+      priceEn: '৳ 2,200 / night',
+      specsBn: ['১ ডাবল বেড', 'আর্ট ডেকোরেশন ও সাইড ল্যাম্প', 'স্প্লিট এসি', 'হাই-স্পিড ওয়াই-ফাই'],
+      specsEn: ['1 Double Bed', 'Art Decor & Bedside Lamps', 'Split AC Unit', 'High-Speed Wi-Fi'],
+      descBn: 'রুচিশীল আধুনিক ইন্টেরিয়র, নরম আলোকসজ্জা ও আরামদায়ক ডাবল বিছানাসহ পরিপাটি রুম। শান্ত পরিবেশে কাপল বা বন্ধুদের নির্বিঘ্ন ছুটির জন্য চমৎকার।',
+      descEn: 'Artfully appointed with soothing landscape art, warm ambient bedside lighting, and a plush double bed. Perfect peaceful retreat for couples or business travelers.',
       phone: '+8801612505060'
     }
   ];
 
   // ====================================================
-  // 2. VERIFIED FACEBOOK REELS & VIDEOS DATASET
+  // 2. 15 AUTHENTIC FACEBOOK PHOTOS DATASET
+  // ====================================================
+  const GALLERY = [
+    {
+      id: 1,
+      cat: 'exterior',
+      img: 'assets/img/graded/exterior-day-hills.jpg',
+      titleBn: 'দিনের আলোয় সবুজ পাহাড়ে ঘেরা রিসোর্ট প্রাঙ্গণ',
+      titleEn: 'Daytime Stepped Architecture Nestled in Bandarban Hills',
+      descBn: 'লাল ছাদ ও পাহাড়ি ধাপে নির্মিত রিসোর্টের মূল ভবন ও চারপাশের সবুজের মেলা।',
+      descEn: 'Stepped hillside architecture with tropical mountain backdrops.'
+    },
+    {
+      id: 2,
+      cat: 'exterior',
+      img: 'assets/img/graded/balcony-misty-mountain-view.jpg',
+      titleBn: 'রুমের প্রাইভেট ব্যালকনি থেকে সকালের মেঘ ও কুয়াশা',
+      titleEn: 'Private Room Balcony with Morning Fog & Hill Vista',
+      descBn: 'গেস্ট রুমের ব্যালকনি থেকে সরাসরি বান্দরবানের কুয়াশাচ্ছন্ন পাহাড়ি উপত্যকা।',
+      descEn: 'Morning fog rolling over green mountain ridges from guest balcony.'
+    },
+    {
+      id: 3,
+      cat: 'exterior',
+      img: 'assets/img/graded/exterior-night-garden.jpg',
+      titleBn: 'রাতের মনোমুগ্ধকর আলোকসজ্জা ও বাগান ওয়াকওয়ে',
+      titleEn: 'Atmospheric Night Facade & Illuminated Garden Walkway',
+      descBn: 'সন্ধ্যা নামতেই রিসোর্টের শান্ত স্নিগ্ধ আলো ও নিরাপদ কার পার্কিং এরিয়া।',
+      descEn: 'Warm facade illumination, secure paved parking, and lush night trees.'
+    },
+    {
+      id: 4,
+      cat: 'exterior',
+      img: 'assets/img/graded/entrance-signboard-highway.jpg',
+      titleBn: 'বান্দরবান-কেরানীহাট হাইওয়েতে মূল প্রবেশদ্বার ও সাইনবোর্ড',
+      titleEn: 'Highway Entrance Gate & Official Roadside Billboard',
+      descBn: 'জথ খামার এলাকায় প্রধান সড়কের কোল ঘেঁষে রিসোর্টে প্রবেশের সহজ রাস্তা।',
+      descEn: 'Prime highway frontage in Jotho Khamar with hotline and directions.'
+    },
+    {
+      id: 5,
+      cat: 'rooms',
+      img: 'assets/img/graded/room-couple-honeymoon-swan.jpg',
+      titleBn: 'হানিমুন কাপল স্যুট — রাজহাঁস তোয়ালে আর্ট ও এলইডি মিরর',
+      titleEn: 'Honeymoon Couple Suite with Swan Towel Art & Vanity Mirror',
+      descBn: 'নবদম্পতিদের জন্য স্পেশাল ফ্লাওয়ার ও সোয়ান তোয়ালে সাজানো রোমান্টিক বেড।',
+      descEn: 'Romantic king bedding with folded swans, ambient LED mirror, and smart TV.'
+    },
+    {
+      id: 6,
+      cat: 'rooms',
+      img: 'assets/img/graded/room-family-deluxe-dual-beds.jpg',
+      titleBn: 'সুপার ডিলাক্স ফ্যামিলি স্যুট — দুটি বড় ডাবল বেড',
+      titleEn: 'Super Deluxe Family Suite with Dual Queen Beds',
+      descBn: '৪-৫ জনের পরিবারের জন্য প্রশস্ত রুম, ফলস সিলিং স্পটলাইট ও কাঠের ডেকোর।',
+      descEn: 'Spacious dual beds, ambient cove ceiling lights, and timber furniture.'
+    },
+    {
+      id: 7,
+      cat: 'rooms',
+      img: 'assets/img/graded/room-suite-arched-mirror.jpg',
+      titleBn: 'প্রিমিয়াম কাপল স্যুট — আর্চড ড্রেসিং মিরর ও সোফা',
+      titleEn: 'Premium Suite with Arched Full-Length Mirror & Seating',
+      descBn: 'মার্জিত ইন্টেরিয়র, ফুল-লেন্থ কাঠের ড্রেসিং মিরর ও কমফোর্টেবল সোফা কর্নার।',
+      descEn: 'Elegant curved full mirror, cozy sofa sitting, and relaxing warm hues.'
+    },
+    {
+      id: 8,
+      cat: 'rooms',
+      img: 'assets/img/graded/room-double-wall-art.jpg',
+      titleBn: 'সুপিরিয়র ডাবল বেডরুম — ল্যান্ডস্কেপ ওয়াল আর্ট ও নাইট ল্যাম্প',
+      titleEn: 'Superior Double Room with Landscape Art & Bedside Lamps',
+      descBn: 'আর্টিস্টিক ওয়াল ফ্রেম, বেডসাইড ল্যাম্প ও পরিচ্ছন্ন সুতির নরম বিছানা।',
+      descEn: 'Serene wall painting, warm bedside reading lights, and spotless linens.'
+    },
+    {
+      id: 9,
+      cat: 'rooms',
+      img: 'assets/img/graded/room-suite-false-ceiling.jpg',
+      titleBn: 'মডার্ন স্যুট ইন্টেরিয়র — ফলস সিলিং ও ড্রেসিং ভ্যানিটি',
+      titleEn: 'Modern Bedroom Suite with False Ceiling & Spotlights',
+      descBn: 'আধুনিক সিলিং স্পটলাইট, কাঠের ওয়্যারড্রব ও ব্যক্তিগত ব্যালকনি প্রবেশপথ।',
+      descEn: 'Custom false ceiling architecture with fitted woodwork and side vanity.'
+    },
+    {
+      id: 10,
+      cat: 'rooms',
+      img: 'assets/img/graded/room-canopy-bed-cozy.jpg',
+      titleBn: 'কোজি বাজেট রুম — ট্র্যাডিশনাল কাঠের ক্যানোপি বেড ফ্রেম',
+      titleEn: 'Cozy Timber Canopy Bed Frame with Overhead Net Structure',
+      descBn: 'ঐতিহ্যবাহী কাঠের নকশার খাট, সার্বক্ষণিক মশারির নিরাপত্তা ও আরামদায়ক স্টে।',
+      descEn: 'Classic wooden craftsmanship with protective overhead frame.'
+    },
+    {
+      id: 11,
+      cat: 'rooms',
+      img: 'assets/img/graded/room-balcony-doorway-view.jpg',
+      titleBn: 'বেডরুম থেকে প্রাইভেট হিল ভিউ ব্যালকনির প্রবেশপথ',
+      titleEn: 'Bedroom Leading to Private Scenic Hill Balcony',
+      descBn: 'বিছানায় শুয়েই কাঁচের দরজার ওপারে দেখা যায় বান্দরবানের সবুজ পাহাড়ের চূড়া।',
+      descEn: 'Floor-to-ceiling glass doorway opening straight to fresh hill breezes.'
+    },
+    {
+      id: 12,
+      cat: 'rooms',
+      img: 'assets/img/graded/room-suite-wardrobe-vanity.jpg',
+      titleBn: 'স্যুট রুমের ফিটেড ওয়্যারড্রব ও লাগেজ স্পেস',
+      titleEn: 'Suite Room with Fitted Wardrobe & Vanity Station',
+      descBn: 'গেস্টদের কাপড়চোপড় ও মালামাল নিরাপদে রাখার জন্য বড় কাঠের আলমারি।',
+      descEn: 'Ample closet storage, wooden finish, and convenient guest dressing.'
+    },
+    {
+      id: 13,
+      cat: 'rooms',
+      img: 'assets/img/graded/room-woodwork-interior.jpg',
+      titleBn: 'আর্কিটেকচারাল কাঠের কারুকাজ ও সিলিং মল্ডিং',
+      titleEn: 'Architectural Wood Trim, Door Carpentry & Ceilings',
+      descBn: 'টেকসই কাঠের দরজা, প্রাকৃতিক রঙের ফিনিশিং ও পাহাড়ি রিসোর্টের উষ্ণ ছোঁয়া।',
+      descEn: 'Fine craftsmanship showcasing polished wooden doors and moldings.'
+    },
+    {
+      id: 14,
+      cat: 'amenities',
+      img: 'assets/img/graded/amenities-toiletries-kit.jpg',
+      titleBn: 'কমপ্লিমেন্টারি প্রিমিয়াম টয়লেট্রিজ ও ডেন্টাল কিট',
+      titleEn: 'Resort Toiletries Kit, Dental Care & Fresh Linens',
+      descBn: 'প্রতিটি রুমের সাথে দেওয়া হয় পরিষ্কার সিল্ড টুথব্রাশ কিট, সাবান ও ফ্রেশ তোয়ালে।',
+      descEn: 'Complimentary guest welcome tray with dental sets, soap, and clean linens.'
+    },
+    {
+      id: 15,
+      cat: 'amenities',
+      img: 'assets/img/graded/resort-banner-composite.jpg',
+      titleBn: 'রিসোর্ট অফিসিয়াল ব্যানার — এক্সটেরিয়র, পার্কিং ও পাহাড়',
+      titleEn: 'Official Resort Banner with Exterior & Parking Overview',
+      descBn: 'দ্যা ভ্যাকেশন ইন হোটেল অ্যান্ড রিসোর্টের পূর্ণাঙ্গ প্রপার্টি ও সুবিধার এক ঝলক।',
+      descEn: 'Overview composite capturing facade, parking area, and resort comfort.'
+    }
+  ];
+
+  // ====================================================
+  // 3. CURATED FACEBOOK REELS DATASET (Zero Black Screen Architecture)
   // ====================================================
   const REELS = [
     {
       titleBn: 'বান্দরবানের পাহাড়ি প্রকৃতির মায়ায় দ্যা ভ্যাকেশন ইন হোটেল অ্যান্ড রিসোর্ট',
-      titleEn: 'The Vacation Inn Hotel & Resort — Surrounded by Misty Bandarban Hills',
+      titleEn: 'The Vacation Inn Hotel & Resort — Property Tour & Hill Panorama',
       views: '100K+',
+      duration: '0:55',
       tagBn: 'ভাইরাল রিল',
       tagEn: 'Viral Resort Reel',
-      img: 'assets/gen/hero-bandarban.jpg',
+      img: 'assets/img/graded/exterior-day-hills.jpg',
       url: 'https://www.facebook.com/reel/1472027100557704/'
     },
     {
       titleBn: 'মেঘের কোলে সকালের অপরূপ দৃশ্য ও ব্যালকনি ভিউ',
       titleEn: 'Cloud-Top Morning Vistas & Balcony Views at Vacation Inn',
       views: '41K+',
+      duration: '0:42',
       tagBn: 'পাহাড় ও মেঘ',
       tagEn: 'Misty Mountains',
-      img: 'assets/gen/tour-nilgiri.jpg',
+      img: 'assets/img/graded/balcony-misty-mountain-view.jpg',
       url: 'https://www.facebook.com/reel/4512312585672284/'
     },
     {
       titleBn: 'রিসোর্টের মনোরম রাতের পরিবেশ ও আলোকসজ্জা',
       titleEn: 'Charming Night Ambience & Highway Illumination at Vacation Inn',
       views: '13K+',
+      duration: '0:38',
       tagBn: 'নাইট ভিউ',
       tagEn: 'Night Ambience',
-      img: 'assets/img/exterior-night.jpg',
+      img: 'assets/img/graded/exterior-night-garden.jpg',
       url: 'https://www.facebook.com/reel/1460623972679987/'
     },
     {
-      titleBn: 'প্রিমিয়াম কাপল ও ফ্যামিলি রুমের ভেতরকার সাজসজ্জা ও পরিবেশ',
-      titleEn: 'Inside Look at Premium Couple & Family Suites at Vacation Inn',
+      titleBn: 'হানিমুন কাপল স্যুটের রাজহাঁস তোয়ালে আর্ট ও ভেতরকার সাজসজ্জা',
+      titleEn: 'Deluxe Honeymoon Couple Suite Interior & Swan Towel Decor',
       views: '4.8K+',
+      duration: '0:48',
       tagBn: 'রুম ট্যুর',
       tagEn: 'Room Tour',
-      img: 'assets/gen/room-couple.jpg',
+      img: 'assets/img/graded/room-couple-honeymoon-swan.jpg',
       url: 'https://www.facebook.com/reel/991619106828635/'
+    },
+    {
+      titleBn: 'সুপার ডিলাক্স ফ্যামিলি স্যুটের রুম ট্যুর ও প্রশস্ত বেডরুম',
+      titleEn: 'Family Suite Walkthrough with Dual Queen Beds & Lounge',
+      views: '8.5K+',
+      duration: '0:50',
+      tagBn: 'ফ্যামিলি স্যুট',
+      tagEn: 'Family Suite',
+      img: 'assets/img/graded/room-family-deluxe-dual-beds.jpg',
+      url: 'https://www.facebook.com/reel/1472027100557704/'
+    },
+    {
+      titleBn: 'বান্দরবান-কেরানীহাট হাইওয়ে গেট ও রিসোর্টে আসার সহজ পথ',
+      titleEn: 'Resort Entrance Highway Location & Road Access Guide',
+      views: '6.2K+',
+      duration: '0:35',
+      tagBn: 'লোকেশন গাইড',
+      tagEn: 'Location Guide',
+      img: 'assets/img/graded/entrance-signboard-highway.jpg',
+      url: 'https://www.facebook.com/reel/4512312585672284/'
     }
   ];
 
@@ -403,55 +590,155 @@
   });
 
   // ====================================================
-  // 6. RENDER VIDEO REELS SLIDER
+  // 6. RENDER AUTHENTIC PHOTO GALLERY & LIGHTBOX
+  // ====================================================
+  const galleryGrid = document.getElementById('galleryGrid');
+  const galleryModal = document.getElementById('galleryModal');
+  const gmClose = document.getElementById('gmClose');
+  const gmImg = document.getElementById('gmImg');
+  const gmTag = document.getElementById('gmTag');
+  const gmTitle = document.getElementById('gmTitle');
+  const gmDesc = document.getElementById('gmDesc');
+  const gmWa = document.getElementById('gmWa');
+  const gTabs = document.querySelectorAll('.g-tab');
+
+  function renderGallery(filter = 'all') {
+    if (!galleryGrid) return;
+    const isEn = currentLang === 'en';
+    const items = (filter === 'all')
+      ? GALLERY
+      : GALLERY.filter(g => g.cat === filter);
+
+    galleryGrid.innerHTML = items.map(item => `
+      <article class="gallery-card" data-gid="${item.id}" role="button" tabindex="0" aria-label="${isEn ? item.titleEn : item.titleBn}">
+        <img src="${item.img}" alt="${isEn ? item.titleEn : item.titleBn}" loading="lazy">
+        <div class="g-overlay">
+          <span class="g-badge">${item.cat === 'exterior' ? (isEn ? 'Exterior & View' : 'এক্সটেরিয়র ও ভিউ') : item.cat === 'rooms' ? (isEn ? 'Room & Suite' : 'রুম ও স্যুট') : (isEn ? 'Amenities' : 'সুবিধাসমূহ')}</span>
+          <h3 class="g-title">${isEn ? item.titleEn : item.titleBn}</h3>
+          <p class="g-desc">${isEn ? item.descEn : item.descBn}</p>
+        </div>
+        <div class="g-zoom-btn" aria-hidden="true">
+          <svg><use href="#i-star"/></svg>
+        </div>
+      </article>
+    `).join('');
+
+    // Attach click to open photo lightbox
+    galleryGrid.querySelectorAll('.gallery-card').forEach(card => {
+      const openItem = () => {
+        const item = GALLERY.find(g => g.id === parseInt(card.dataset.gid, 10));
+        if (!item || !galleryModal) return;
+
+        if (gmImg) gmImg.src = item.img;
+        if (gmTag) gmTag.textContent = item.cat === 'exterior' ? (isEn ? 'Exterior & View' : 'এক্সটেরিয়র ও ভিউ') : item.cat === 'rooms' ? (isEn ? 'Room & Suite' : 'রুম ও স্যুট') : (isEn ? 'Amenities' : 'সুবিধাসমূহ');
+        if (gmTitle) gmTitle.textContent = isEn ? item.titleEn : item.titleBn;
+        if (gmDesc) gmDesc.textContent = isEn ? item.descEn : item.descBn;
+        if (gmWa) {
+          gmWa.href = `https://wa.me/8801612505060?text=${encodeURIComponent((isEn ? 'Hello The Vacation Inn Bandarban, I am inquiring about this photo from your gallery: ' : 'আসসালামু আলাইকুম The Vacation Inn, আপনাদের গ্যালারির এই ছবিটি সম্পর্কে জানতে চাই: ') + (isEn ? item.titleEn : item.titleBn))}`;
+        }
+
+        if (typeof galleryModal.showModal === 'function') {
+          galleryModal.showModal();
+        }
+      };
+
+      card.addEventListener('click', openItem);
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openItem();
+        }
+      });
+    });
+  }
+
+  // Filter tabs
+  gTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      gTabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-pressed', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-pressed', 'true');
+      renderGallery(tab.dataset.gfilter || 'all');
+    });
+  });
+
+  function closeGalleryModal() {
+    galleryModal?.close();
+  }
+  gmClose?.addEventListener('click', closeGalleryModal);
+  galleryModal?.addEventListener('click', (e) => {
+    if (e.target === galleryModal) closeGalleryModal();
+  });
+
+  // ====================================================
+  // 7. RENDER VIDEO REELS SLIDER (Zero Black Screen Architecture)
   // ====================================================
   const reelTrack = document.getElementById('reelTrack');
   const player = document.getElementById('player');
-  const playerFrame = document.getElementById('playerFrame');
-  const playerFb = document.getElementById('playerFb');
+  const playerClose = document.getElementById('playerClose');
+  const playerPoster = document.getElementById('playerPoster');
+  const playerTag = document.getElementById('playerTag');
+  const playerViews = document.getElementById('playerViews');
+  const playerDuration = document.getElementById('playerDuration');
+  const playerTitle = document.getElementById('playerTitle');
+  const playerPlayCenter = document.getElementById('playerPlayCenter');
+  const playerFbMain = document.getElementById('playerFbMain');
   const playerWa = document.getElementById('playerWa');
-  const playerClose = document.querySelector('.player-close');
 
   function renderReels() {
     if (!reelTrack) return;
     const isEn = currentLang === 'en';
 
     reelTrack.innerHTML = REELS.map((r, i) => `
-      <article class="reel-card" data-idx="${i}">
+      <article class="reel-card" data-idx="${i}" role="button" tabindex="0" aria-label="${isEn ? r.titleEn : r.titleBn}">
         <img src="${r.img}" alt="${isEn ? r.titleEn : r.titleBn}" loading="lazy">
         <span class="r-views"><svg><use href="#i-play"/></svg>${r.views}</span>
         <div class="r-play"><svg><use href="#i-play"/></svg></div>
         <div class="r-info">
-          <small class="gold">${isEn ? r.tagEn : r.tagBn}</small>
+          <small class="gold">${isEn ? r.tagEn : r.tagBn} • ${r.duration}</small>
           <h3>${isEn ? r.titleEn : r.titleBn}</h3>
         </div>
       </article>
     `).join('');
 
-    // Attach click to open video modal
+    // Attach click to open the zero-black-screen cinema showcase modal
     reelTrack.querySelectorAll('.reel-card').forEach(card => {
-      card.addEventListener('click', () => {
+      const openCard = () => {
         const item = REELS[card.dataset.idx];
         if (!item || !player) return;
         const title = isEn ? item.titleEn : item.titleBn;
 
-        if (playerFb) playerFb.href = item.url;
+        if (playerPoster) playerPoster.src = item.img;
+        if (playerTag) playerTag.textContent = isEn ? item.tagEn : item.tagBn;
+        if (playerViews) playerViews.innerHTML = `<svg><use href="#i-play"/></svg> ${item.views}`;
+        if (playerDuration) playerDuration.textContent = item.duration;
+        if (playerTitle) playerTitle.textContent = title;
+
+        if (playerPlayCenter) playerPlayCenter.href = item.url;
+        if (playerFbMain) playerFbMain.href = item.url;
         if (playerWa) {
           playerWa.href = `https://wa.me/8801612505060?text=${encodeURIComponent((isEn ? 'Hello The Vacation Inn Bandarban, I watched this reel on your website: ' : 'আসসালামু আলাইকুম The Vacation Inn, আপনাদের ওয়েবসাইটের এই রিলটি দেখলাম: ') + title + ' (' + item.url + ')')}`;
-        }
-        if (playerFrame) {
-          playerFrame.src = `https://www.facebook.com/plugins/video.php?height=720&href=${encodeURIComponent(item.url)}&show_text=false&width=405&t=0`;
         }
 
         if (typeof player.showModal === 'function') {
           player.showModal();
+        }
+      };
+
+      card.addEventListener('click', openCard);
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openCard();
         }
       });
     });
   }
 
   function closePlayer() {
-    if (playerFrame) playerFrame.src = '';
     player?.close();
   }
   playerClose?.addEventListener('click', closePlayer);
@@ -561,9 +848,11 @@
       renderHeroCard(currentRoom, lang === 'en');
     }
 
-    // Re-render rooms & reels
+    // Re-render rooms, gallery & reels
     const activeChip = document.querySelector('.chips button[aria-pressed="true"]');
     renderRooms(activeChip ? activeChip.dataset.filter : 'all');
+    const activeGTab = document.querySelector('.g-tab.active');
+    renderGallery(activeGTab ? activeGTab.dataset.gfilter : 'all');
     renderReels();
     updateCostEstimate();
 
@@ -635,6 +924,7 @@
   setHeroRoom(0, false);
   startHeroAutoSlide();
   renderRooms('all');
+  renderGallery('all');
   renderReels();
   if (currentLang === 'en') {
     setLanguage('en');
